@@ -1,0 +1,13 @@
+Comment,Designator,Footprint,LCSC
+"Keystone Electronics 2466","BT1","Battery:BatteryHolder_Keystone_2466_1xAAA",""
+"GMC10X5R226M10NT","C1","Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder","C59461"
+"100n","C2","Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder","C1525"
+"LTST-C190KFKT","D1,D2,D3,D4,D5,D6,D7,D8","LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder","C157740 "
+"SMLD12E2N1WT86","D15,D16","LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder","C192316"
+"SMLD12E3N1WT86","D9,D10,D11,D12,D13,D14","LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder","C192316"
+"WIP201612S-2R2MLDG","L1","Inductor_SMD:L_0805_2012Metric_Pad1.15x1.40mm_HandSolder","C42215"
+"47","R1,R2","Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder","C23182"
+"300","R3,R4,R5,R6,R7,R8","Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder","C23025"
+"TS02-66-43-BK-160-LCR-D","SW1","Button_Switch_THT:SW_PUSH_6mm_H4.3mm",""
+"STC8H1K08-TSSOP20","U1","Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm"," C915673"
+"TPS613226ADBVR","U3","Package_TO_SOT_SMD:SOT-23-5",""

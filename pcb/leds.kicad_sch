@@ -1348,6 +1348,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C192316"
+			(at 130.81 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b277dea8-b1c6-4d34-921f-69ff2d23a4c2")
 		)
@@ -1410,6 +1419,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 182.88 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23025"
 			(at 182.88 138.43 0)
 			(effects
 				(font
@@ -1489,6 +1507,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C157740 "
+			(at 140.97 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "108f9c19-7338-442c-8b87-c2fb86851aa0")
 		)
@@ -1552,6 +1579,15 @@
 			)
 		)
 		(property "Description" "505nm LED"
+			(at 182.88 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C192316"
 			(at 182.88 146.05 0)
 			(effects
 				(font
@@ -1631,6 +1667,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C157740 "
+			(at 148.59 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "06ed1fe2-4dcc-4f37-90b5-b16cfc5f7292")
 		)
@@ -1693,6 +1738,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 101.6 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23182"
 			(at 101.6 85.09 0)
 			(effects
 				(font
@@ -1771,6 +1825,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C23025"
+			(at 90.17 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f4cdbd70-d160-41cc-8f15-c3f60c03603c")
 		)
@@ -1833,6 +1896,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 101.6 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23025"
 			(at 101.6 138.43 0)
 			(effects
 				(font
@@ -1904,6 +1976,15 @@
 			)
 		)
 		(property "Description" "605nm LED"
+			(at 132.08 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C157740 "
 			(at 132.08 99.06 0)
 			(effects
 				(font
@@ -2048,6 +2129,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C23025"
+			(at 121.92 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "296ca11a-9446-4394-8490-69f8c6a6ad0e")
 		)
@@ -2111,6 +2201,15 @@
 			)
 		)
 		(property "Description" "605nm LED"
+			(at 116.84 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C157740 "
 			(at 116.84 99.06 0)
 			(effects
 				(font
@@ -2190,6 +2289,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C192316"
+			(at 121.92 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d4eccaf8-b4c3-408d-abab-a7da7a755808")
 		)
@@ -2261,6 +2369,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C157740 "
+			(at 101.6 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "1881ebd7-2aca-47b1-8d23-654cd8c53fad")
 		)
@@ -2324,6 +2441,15 @@
 			)
 		)
 		(property "Description" "496nm LED"
+			(at 170.18 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C192316"
 			(at 170.18 146.05 0)
 			(effects
 				(font
@@ -2468,6 +2594,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C23182"
+			(at 140.97 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2143a7e9-b224-4f80-97cc-be5cc7f77599")
 		)
@@ -2539,6 +2674,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C192316"
+			(at 193.04 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "26fab80a-f895-4e74-ad32-9363a161f21a")
 		)
@@ -2601,6 +2745,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 161.29 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23025"
 			(at 161.29 138.43 0)
 			(effects
 				(font
@@ -2680,6 +2833,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C192316"
+			(at 101.6 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "79f03725-022e-4634-8918-2c25fedfeb95")
 		)
@@ -2743,6 +2905,15 @@
 			)
 		)
 		(property "Description" "605nm LED"
+			(at 109.22 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C157740 "
 			(at 109.22 99.06 0)
 			(effects
 				(font
@@ -2888,6 +3059,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C157740 "
+			(at 156.21 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "920ad07c-c0b7-42b5-a28a-00a35eb2b5f7")
 		)
@@ -2951,6 +3131,15 @@
 			)
 		)
 		(property "Description" "605nm LED"
+			(at 92.71 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C157740 "
 			(at 92.71 99.06 0)
 			(effects
 				(font
@@ -3030,6 +3219,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C192316"
+			(at 90.17 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "c6c1b05f-f5ed-4baf-ad96-d394bb234d86")
 		)
@@ -3101,6 +3299,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C192316"
+			(at 161.29 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "066b61bb-1151-4665-a4f3-4fe5c999f878")
 		)
@@ -3162,6 +3369,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 130.81 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23025"
 			(at 130.81 138.43 0)
 			(effects
 				(font

@@ -1128,6 +1128,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C59461"
+			(at 100.33 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b11f4a68-82c1-41cc-8ac2-21e3c8f6e8ac")
 		)
@@ -1188,6 +1197,15 @@
 			)
 		)
 		(property "Description" "Inductor"
+			(at 60.96 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C42215"
 			(at 60.96 69.85 0)
 			(effects
 				(font

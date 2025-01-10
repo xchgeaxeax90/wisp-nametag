@@ -466,8 +466,8 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "../pcb_outputs/nametag_blank/",
-      "pos_files": "",
+      "plot": "../pcb_outputs/nametag/",
+      "pos_files": "../pcb_outputs/",
       "specctra_dsn": "",
       "step": "",
       "svg": "",
@@ -539,6 +539,12 @@
           "label": "Description",
           "name": "Description",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "LCSC",
+          "name": "LCSC",
+          "show": true
         }
       ],
       "filter_string": "",
@@ -576,7 +582,7 @@
     },
     "net_format_name": "",
     "page_layout_descr_file": "",
-    "plot_directory": "",
+    "plot_directory": "./",
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
     "spice_model_current_sheet_as_root": true,
