@@ -90,4 +90,4 @@ clean:
 	rm -rf $(BDIR)/*
 
 flash:
-	/opt/stc8prog/stc8prog -p /dev/ttyUSB0 -e -f $(BDIR)/$(PROJECT).hex
+	stcgal -p /dev/ttyUSB0 -P stc8g -a  $(BDIR)/$(PROJECT).hex

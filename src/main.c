@@ -7,10 +7,17 @@ static void setup_gpio(void){
 }
 
 int main(void){
+    //SYS_SetClock();
     setup_gpio();
 
-    while(1) {
-        P1 ^= GPIO_Pin_2 | GPIO_Pin_3;
-        SYS_Delay(500);
+    P1 = GPIO_Pin_2;
+    SYS_Delay(100);
+    P1 = 0;
+
+    for(;;) {
+        P1 = GPIO_Pin_3;
+        SYS_Delay(5);
+        P1 = 0;
+        SYS_Delay(5);
     }
 }
