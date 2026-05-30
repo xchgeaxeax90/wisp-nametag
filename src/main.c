@@ -99,29 +99,40 @@ static void setup_pwm(void){
     SFRX_OFF();
 }
 
+void setup_timer2_interrupt(void){
+    TIM_Timer2_Set1TMode(HAL_State_ON);
+    TIM_Timer2_SetPreScaler(0xff);
+    uint16_t count = 0xffff - ((unsigned long long) __SYSCLOCK / (256 * 100));
+    TIM_Timer2_SetInitValue(count >> 8, count & 0xff);
+    /* Don't use this, it's enormous because it includes a division */
+    /* TIM_Timer2_Config(HAL_State_ON, 0xff, 100); */
+    EXTI_Timer2_SetIntState(HAL_State_ON);
+    EXTI_Global_SetIntState(HAL_State_ON);
+    TIM_Timer2_SetRunState(HAL_State_ON);
+}
+
+static __idata uint8_t timer2_int_count;
+INTERRUPT(Timer2_Routine, EXTI_VectTimer2) __using(1) {
+    SFRX_ON();
+    PWMA_CCR1L = timer2_int_count;
+    PWMA_CCR2L = (timer2_int_count + 0x20);
+    PWMA_CCR3L = (timer2_int_count + 0x40);
+    PWMA_CCR4L = (timer2_int_count + 0x60);
+    PWMB_CCR5L = (timer2_int_count + 0x80);
+    PWMB_CCR6L = (timer2_int_count + 0xa0);
+    PWMB_CCR7L = (timer2_int_count + 0xc0);
+    PWMB_CCR8L = (timer2_int_count + 0xe0);
+    SFRX_OFF();
+
+    timer2_int_count += 1;
+}
+
+
 int main(void){
     //SYS_SetClock();
     setup_gpio();
     setup_pwm();
 
-    P1 = GPIO_Pin_2;
-    SYS_Delay(10);
-    P1 = 0;
-
-    uint8_t i=0;
-    for(;;) {
-        SFRX_ON();
-        PWMA_CCR1L = i;
-        PWMA_CCR2L = (i + 0x20);
-        PWMA_CCR3L = (i + 0x40);
-        PWMA_CCR4L = (i + 0x60);
-        PWMB_CCR5L = (i + 0x80);
-        PWMB_CCR6L = (i + 0xa0);
-        PWMB_CCR7L = (i + 0xc0);
-        PWMB_CCR8L = (i + 0xe0);
-        SFRX_OFF();
-
-        i += 1;
-        SYS_Delay(20);
-    }
+    setup_timer2_interrupt();
+    while(1);
 }

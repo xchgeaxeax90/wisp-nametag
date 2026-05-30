@@ -89,5 +89,5 @@ $(BDIR)/$(PROJECT).hex: $(USER_RELS) $(BDIR)/$(LIB_FWLIB)
 clean:
 	rm -rf $(BDIR)/*
 
-flash:
+flash: $(BDIR)/$(PROJECT).hex
 	stcgal -p /dev/ttyUSB0 -P stc8g -a  $(BDIR)/$(PROJECT).hex
