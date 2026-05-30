@@ -57,35 +57,46 @@ static void setup_pwm(void){
     PWMA_CCER2 = 0x55;
     PWMB_CCER1 = 0x55;
     PWMB_CCER2 = 0x55;
-        
+
+    /* Set prescaler to 0 */
+    PWMA_PSCRH = 0;
+    PWMA_PSCRL = 0;
+    PWMB_PSCRH = 0;
+    PWMB_PSCRL = 0;
+
+    /* Set auto reload register/period to 0xff */
+    PWMA_ARRH = 0x0;
+    PWMB_ARRH = 0x0;
+    PWMA_ARRL = 0xff;
+    PWMB_ARRL = 0xff;
+
+    /* Set all PWMB ports to alternate pin selection 1 */
+    PWMB_PS = 0x55;
+
+    /* Enable all output pins on both PWMs */
+    PWMA_ENO = PWM_Pin_1 | PWM_Pin_2 | PWM_Pin_3 | PWM_Pin_4;
+    PWMB_ENO = PWM_Pin_1 | PWM_Pin_2 | PWM_Pin_3 | PWM_Pin_4;
+
+    /* Disable the brake - enable PWM */
+    PWMA_BKR |= 1<<7;
+    PWMB_BKR |= 1<<7;
+
+    /* Set CR1 to enable the counter */
+    PWMA_CR1 =
+        1 << 7 |                /* Enable auto reload preload */
+        0 << 5 |                /* Edge aligned */
+        0 << 4 |                /* Count up */
+        0 << 3 |                /* Continuous Pulses */
+        1 << 0;                 /* Enable counter */
+    PWMB_CR1 =
+        1 << 7 |                /* Enable auto reload preload */
+        0 << 5 |                /* Edge aligned */
+        0 << 4 |                /* Count up */
+        0 << 3 |                /* Continuous Pulses */
+        1 << 0;                 /* Enable counter */
+
+
     SFRX_OFF();
-
-    PWMA_PWM2_SetCaptureCompareValue(0xc0);
-
-    PWMA_SetPrescaler(0);
-    PWMA_SetPeriod(0xff);
-    PWMA_SetCounterDirection(PWM_CounterDirection_Up);
-    PWMA_SetAutoReloadPreload(HAL_State_ON);
-
-    PWMB_SetPrescaler(0);
-    PWMB_SetPeriod(0xff);
-    PWMB_SetCounterDirection(PWM_CounterDirection_Up);
-    PWMB_SetAutoReloadPreload(HAL_State_ON);
-
-    PWMB_PWM1_SetPort(PWMB_PWM5_AlterPort_P17);
-    PWMB_PWM2_SetPort(PWMB_PWM6_AlterPort_P54);
-    PWMB_PWM3_SetPort(PWMB_PWM7_AlterPort_P33);
-    PWMB_PWM4_SetPort(PWMB_PWM8_AlterPort_P34);
-
-
-    PWMA_SetPinOutputState(PWM_Pin_1 | PWM_Pin_2 | PWM_Pin_3 | PWM_Pin_4, HAL_State_ON);
-    PWMA_SetOverallState(HAL_State_ON);
-    PWMA_SetCounterState(HAL_State_ON);
-
-    PWMB_SetPinOutputState(PWM_Pin_1 | PWM_Pin_2 | PWM_Pin_3 | PWM_Pin_4, HAL_State_ON);
-    PWMB_SetOverallState(HAL_State_ON);
-    PWMB_SetCounterState(HAL_State_ON);
-
 }
 
 int main(void){
