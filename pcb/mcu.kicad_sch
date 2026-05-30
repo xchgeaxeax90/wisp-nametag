@@ -1259,7 +1259,7 @@
 		(uuid "1d15af12-b111-45d4-bb22-b374ad8d03bf")
 	)
 	(bus_entry
-		(at 86.36 33.02)
+		(at 86.36 48.26)
 		(size 2.54 -2.54)
 		(stroke
 			(width 0)
@@ -1472,7 +1472,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 30.48) (xy 97.79 30.48)
+			(xy 88.9 45.72) (xy 97.79 45.72)
 		)
 		(stroke
 			(width 0)
@@ -1761,7 +1761,7 @@
 		(uuid "b7a9dc2f-fdb2-4d46-bd40-cae837741c2e")
 	)
 	(label "pwm3"
-		(at 97.79 48.26 180)
+		(at 97.79 45.72 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1781,7 +1781,7 @@
 		(uuid "c4b2c950-0a3e-4c01-a136-2c8ddb9c2934")
 	)
 	(label "pwm0"
-		(at 97.79 30.48 180)
+		(at 97.79 48.26 180)
 		(effects
 			(font
 				(size 1.27 1.27)
