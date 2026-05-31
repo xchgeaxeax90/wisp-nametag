@@ -22,6 +22,8 @@ USER_CDIRS          := .
 USER_CFILES         :=
 USER_INCLUDES       := .
 
+PORT ?= /dev/ttyUSB0
+
 
 ## STC8H1K08 36.864MHz
 LIB_FLAGS           := __CONF_FOSC=24010000UL \

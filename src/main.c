@@ -8,7 +8,8 @@
 volatile __idata uint16_t button_timeout = 0;
 volatile __BIT button_state = 0;
 void poll_button(void){
-    if(P3 & BUTTON_PIN){
+    /* Button is active low */
+    if(!(P3 & BUTTON_PIN)){
         if(!button_state){
             button_timeout = 0;
         } else {
@@ -55,6 +56,8 @@ int main(void){
     setup_pwm();
 
     setup_timer2_interrupt();
+    UART1_Config8bitUart(UART1_BaudSource_Timer1, HAL_State_ON, 115200);
+
     while(1) {
         /* Atomically read button state and timeout into local variables */
         EXTI_Global_SetIntState(HAL_State_OFF);
@@ -63,16 +66,19 @@ int main(void){
         EXTI_Global_SetIntState(HAL_State_ON);
         /* Use button state and timeout to determine how long the button was held */
         if(state == 0 && timeout > 20 && timeout < 300){
+            UART1_TxString("short\r\n");
             short_button_press();
         }
         if(state == 0 && timeout >= 300 && timeout < 700){
+            UART1_TxString("long\r\n");
             long_button_press();
         }
         if(state == 1 && timeout == 700){
+            UART1_TxString("select_off\r\n");
             select_off_animation();
         }
         if(state == 0 && timeout >= 700){
-            deep_sleep();
+            /* deep_sleep(); */
         }
         if(state == 0 && timeout != 0){
             EXTI_Global_SetIntState(HAL_State_OFF);

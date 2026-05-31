@@ -90,4 +90,4 @@ clean:
 	rm -rf $(BDIR)/*
 
 flash: $(BDIR)/$(PROJECT).hex
-	stcgal -p /dev/ttyUSB0 -P stc8g -a  $(BDIR)/$(PROJECT).hex
+	stcgal -p $(PORT) -P stc8g $(BDIR)/$(PROJECT).hex
