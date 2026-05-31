@@ -63,7 +63,7 @@
 				(justify left top)
 			)
 		)
-		(pin "pwm[0..7]" output
+		(pin "pwm[1..8]" output
 			(at 148.59 50.8 0)
 			(uuid "385ba591-5fdc-41d6-8450-bcd74429197f")
 			(effects
@@ -175,7 +175,7 @@
 				(justify left top)
 			)
 		)
-		(pin "pwm[0..7]" input
+		(pin "pwm[1..8]" input
 			(at 163.83 50.8 180)
 			(uuid "2fdf9aee-b426-428e-b754-11fa83cdad9f")
 			(effects

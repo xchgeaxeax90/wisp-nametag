@@ -451,6 +451,86 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Face Bot L"
+		(exclude_from_sim no)
+		(at 133.858 153.416 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "04b61563-99b2-4b8d-a8bd-0e52dd2baf63")
+	)
+	(text "Eye/Face Top R"
+		(exclude_from_sim no)
+		(at 191.77 134.112 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "15767da2-24bf-4988-adb0-1bd72f3b1b67")
+	)
+	(text "Light L\n"
+		(exclude_from_sim no)
+		(at 109.474 89.916 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "4c007d17-1c64-4138-a2b5-237f7ced509a")
+	)
+	(text "Light R"
+		(exclude_from_sim no)
+		(at 150.876 89.408 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "75814646-e1e9-40b9-ade3-0d10308c655c")
+	)
+	(text "Face Bot C"
+		(exclude_from_sim no)
+		(at 101.854 153.416 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "b74759c7-47eb-40d8-9200-49e28eb87b25")
+	)
+	(text "Eye/Face Top L\n"
+		(exclude_from_sim no)
+		(at 169.418 134.112 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "be4070f6-e4cf-4f7a-ae19-11fb16868c46")
+	)
+	(text "Face Bot R"
+		(exclude_from_sim no)
+		(at 121.92 153.416 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "c7ba6779-615c-478d-8f50-5d32ad9d5bb2")
+	)
+	(text "Face Top C"
+		(exclude_from_sim no)
+		(at 89.408 153.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ef5c41d6-b3ff-43e4-9d5f-6e0b95956a68")
+	)
 	(junction
 		(at 121.92 149.86)
 		(diameter 0)
@@ -1205,8 +1285,8 @@
 		)
 		(uuid "010cb7b2-6793-4784-b177-11fb7e1d60a4")
 	)
-	(label "pwm5"
-		(at 182.88 134.62 0)
+	(label "pwm4"
+		(at 182.88 128.27 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1225,8 +1305,8 @@
 		)
 		(uuid "27d7754d-9faa-4aff-bfec-fcc9f4289594")
 	)
-	(label "pwm1"
-		(at 121.92 134.62 0)
+	(label "pwm8"
+		(at 121.92 128.27 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1235,8 +1315,8 @@
 		)
 		(uuid "429c5dd7-b3e8-41ac-bee5-cfdf3bc34f9b")
 	)
-	(label "pwm4"
-		(at 161.29 134.62 0)
+	(label "pwm1"
+		(at 161.29 128.27 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1245,8 +1325,8 @@
 		)
 		(uuid "61cc058d-2768-41c4-af94-31769ca7258b")
 	)
-	(label "pwm0"
-		(at 101.6 134.62 0)
+	(label "pwm6"
+		(at 101.6 128.27 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1265,8 +1345,8 @@
 		)
 		(uuid "7cb6b8f9-0745-45be-a4dc-342a67a8e561")
 	)
-	(label "pwm6"
-		(at 101.6 81.28 0)
+	(label "pwm2"
+		(at 101.6 80.01 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1275,8 +1355,8 @@
 		)
 		(uuid "82f5bcca-c69e-4722-b7a3-cedfcff798e1")
 	)
-	(label "pwm2"
-		(at 90.17 134.62 0)
+	(label "pwm3"
+		(at 90.17 128.27 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1305,8 +1385,8 @@
 		)
 		(uuid "d5b89661-2760-46ed-86d4-7f57e1c53ead")
 	)
-	(label "pwm3"
-		(at 130.81 134.62 0)
+	(label "pwm5"
+		(at 130.81 128.27 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1326,7 +1406,7 @@
 		)
 		(uuid "bb9cb13f-f519-4367-8858-2d0d3d611d96")
 	)
-	(hierarchical_label "pwm[0..7]"
+	(hierarchical_label "pwm[1..8]"
 		(shape input)
 		(at 59.69 77.47 180)
 		(effects
@@ -1394,7 +1474,7 @@
 				)
 			)
 		)
-		(property "Description" "505nm LED"
+		(property "Description" "Light emitting diode"
 			(at 130.81 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -1406,6 +1486,17 @@
 			)
 		)
 		(property "LCSC" "C5336656"
+			(at 130.81 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 130.81 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -1581,7 +1672,7 @@
 				)
 			)
 		)
-		(property "Description" "605nm LED"
+		(property "Description" "Light emitting diode"
 			(at 140.97 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -1593,6 +1684,17 @@
 			)
 		)
 		(property "LCSC" "C157740 "
+			(at 140.97 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 140.97 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -1675,7 +1777,7 @@
 				)
 			)
 		)
-		(property "Description" "496nm LED"
+		(property "Description" "Light emitting diode"
 			(at 182.88 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -1687,6 +1789,17 @@
 			)
 		)
 		(property "LCSC" "C2846641"
+			(at 182.88 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 182.88 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -1769,7 +1882,7 @@
 				)
 			)
 		)
-		(property "Description" "605nm LED"
+		(property "Description" "Light emitting diode"
 			(at 148.59 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -1781,6 +1894,17 @@
 			)
 		)
 		(property "LCSC" "C157740 "
+			(at 148.59 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 148.59 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -2142,7 +2266,7 @@
 				)
 			)
 		)
-		(property "Description" "605nm LED"
+		(property "Description" "Light emitting diode"
 			(at 132.08 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -2154,6 +2278,17 @@
 			)
 		)
 		(property "LCSC" "C157740 "
+			(at 132.08 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 132.08 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -2407,7 +2542,7 @@
 				)
 			)
 		)
-		(property "Description" "605nm LED"
+		(property "Description" "Light emitting diode"
 			(at 116.84 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -2419,6 +2554,17 @@
 			)
 		)
 		(property "LCSC" "C157740 "
+			(at 116.84 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 116.84 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -2501,7 +2647,7 @@
 				)
 			)
 		)
-		(property "Description" "505nm LED"
+		(property "Description" "Light emitting diode"
 			(at 121.92 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -2513,6 +2659,17 @@
 			)
 		)
 		(property "LCSC" "C5336656"
+			(at 121.92 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 121.92 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -2595,7 +2752,7 @@
 				)
 			)
 		)
-		(property "Description" "605nm LED"
+		(property "Description" "Light emitting diode"
 			(at 101.6 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -2607,6 +2764,17 @@
 			)
 		)
 		(property "LCSC" "C157740 "
+			(at 101.6 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 101.6 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -2689,7 +2857,7 @@
 				)
 			)
 		)
-		(property "Description" "505nm LED"
+		(property "Description" "Light emitting diode"
 			(at 170.18 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -2701,6 +2869,17 @@
 			)
 		)
 		(property "LCSC" "C5336656"
+			(at 170.18 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 170.18 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -2954,7 +3133,7 @@
 				)
 			)
 		)
-		(property "Description" "505nm LED"
+		(property "Description" "Light emitting diode"
 			(at 193.04 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -2966,6 +3145,17 @@
 			)
 		)
 		(property "LCSC" "C5336656"
+			(at 193.04 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 193.04 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -3141,7 +3331,7 @@
 				)
 			)
 		)
-		(property "Description" "505nm LED"
+		(property "Description" "Light emitting diode"
 			(at 101.6 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -3153,6 +3343,17 @@
 			)
 		)
 		(property "LCSC" "C5336656"
+			(at 101.6 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 101.6 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -3235,7 +3436,7 @@
 				)
 			)
 		)
-		(property "Description" "605nm LED"
+		(property "Description" "Light emitting diode"
 			(at 109.22 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -3247,6 +3448,17 @@
 			)
 		)
 		(property "LCSC" "C157740 "
+			(at 109.22 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 109.22 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -3407,7 +3619,7 @@
 				)
 			)
 		)
-		(property "Description" "605nm LED"
+		(property "Description" "Light emitting diode"
 			(at 156.21 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -3419,6 +3631,17 @@
 			)
 		)
 		(property "LCSC" "C157740 "
+			(at 156.21 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 156.21 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -3501,7 +3724,7 @@
 				)
 			)
 		)
-		(property "Description" "605nm LED"
+		(property "Description" "Light emitting diode"
 			(at 92.71 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -3513,6 +3736,17 @@
 			)
 		)
 		(property "LCSC" "C157740 "
+			(at 92.71 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 92.71 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -3595,7 +3829,7 @@
 				)
 			)
 		)
-		(property "Description" "505nm LED"
+		(property "Description" "Light emitting diode"
 			(at 90.17 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -3607,6 +3841,17 @@
 			)
 		)
 		(property "LCSC" "C5336656"
+			(at 90.17 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 90.17 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -3689,7 +3934,7 @@
 				)
 			)
 		)
-		(property "Description" "496nm LED"
+		(property "Description" "Light emitting diode"
 			(at 161.29 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -3701,6 +3946,17 @@
 			)
 		)
 		(property "LCSC" "C2846641"
+			(at 161.29 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 161.29 146.05 0)
 			(hide yes)
 			(show_name no)
