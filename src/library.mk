@@ -90,4 +90,4 @@ clean:
 	rm -rf $(BDIR)/*
 
 flash: $(BDIR)/$(PROJECT).hex
-	stcgal -p $(PORT) -P stc8g $(BDIR)/$(PROJECT).hex
+	stcgal -p $(PORT) -P stc8g -a -A rts $(BDIR)/$(PROJECT).hex

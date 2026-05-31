@@ -3,6 +3,7 @@
 #include "pwm.h"
 #include "timer.h"
 #include "animation.h"
+#include "state_machine.h"
 
 /* TODO determine if we actually need the button state bit */
 volatile __idata uint16_t button_timeout = 0;
@@ -21,10 +22,23 @@ void poll_button(void){
     }
 }
 
+/* Selects which cathode to enable */
+static volatile __BIT eye_en = 0;
+void write_multiplexed(void){
+    if(eye_en){
+        /* Cathode 0 is connected to the eyes, it should be low */
+        CATHODE0_PIN_BIT = RESET;
+        CATHODE1_PIN_BIT = SET;
+    } else {
+
+        CATHODE0_PIN_BIT = SET;
+        CATHODE1_PIN_BIT = RESET;
+    }
+    write_pwm_multiplexed(&animation_ptr->pwm_settings, eye_en);
+}
+
 // Called periodically by TCB0 to update the multiplexing for the eyes and top LEDs
 
-/* Selects which cathode to enable */
-static volatile __BIT cathode_select = 0;
 INTERRUPT_USING(Timer2_Routine, EXTI_VectTimer2, 1) {
     poll_button();
     /* Disable cathodes */
@@ -32,7 +46,8 @@ INTERRUPT_USING(Timer2_Routine, EXTI_VectTimer2, 1) {
 
         write_pwm(&animation_ptr->pwm_settings);
     }
-    cathode_select = ~cathode_select;
+    write_multiplexed();
+    eye_en = !eye_en;
 
     /* Enable the interrupt for PWM overflow to synchronize cathode updates to PWM period */
 }
@@ -78,7 +93,7 @@ int main(void){
             select_off_animation();
         }
         if(state == 0 && timeout >= 700){
-            /* deep_sleep(); */
+            deep_sleep();
         }
         if(state == 0 && timeout != 0){
             EXTI_Global_SetIntState(HAL_State_OFF);

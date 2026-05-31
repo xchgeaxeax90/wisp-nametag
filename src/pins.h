@@ -11,9 +11,13 @@
   - PWMB3 - Alt 1 - P3.3 - Light R
   - PWMB4 - Alt 1 - P3.4 - Face Bot R
   - Button - P3.2 - INT0 - Internal Pullup to VCC
+  - Cathode 0 - P3.7 
+  - Cathode 1 - P1.5 
  */
 
 #define BUTTON_PORT GPIO_Port_3
 #define BUTTON_PIN GPIO_Pin_2
+#define CATHODE0_PIN_BIT P37
+#define CATHODE1_PIN_BIT P15
 
 void setup_gpio(void);
