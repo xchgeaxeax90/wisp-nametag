@@ -41,15 +41,15 @@ uint8_t animation_idx = 0;
 uint8_t selected_animation = 0;
 uint8_t update_animation(void){
     if(timeout_counter >= animation_ptr->timeout){
-	timeout_counter = 0;
-	animation_idx += 1;
-	if(animation_idx >= animation_sizes[selected_animation]){
-	    animation_idx = 0;
-	}
-	cli();
-	animation_ptr = &animation_array[selected_animation][animation_idx];
-	sei();
-	return 1;
+        timeout_counter = 0;
+        animation_idx += 1;
+        if(animation_idx >= animation_sizes[selected_animation]){
+            animation_idx = 0;
+        }
+        cli();
+        animation_ptr = &animation_array[selected_animation][animation_idx];
+        sei();
+        return 1;
     } else {
 	timeout_counter = timeout_counter + 1;
 	return 0;

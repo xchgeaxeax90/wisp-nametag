@@ -27,10 +27,10 @@ static volatile __BIT cathode_select = 0;
 INTERRUPT_USING(Timer2_Routine, EXTI_VectTimer2, 1) {
     poll_button();
     /* Disable cathodes */
-    /* if(update_animation()){ */
+    if(update_animation()){
 
-	/* write_pwm(&animation_ptr->pwm_settings); */
-    /* } */
+        write_pwm(&animation_ptr->pwm_settings);
+    }
     cathode_select = ~cathode_select;
 
     /* Enable the interrupt for PWM overflow to synchronize cathode updates to PWM period */
