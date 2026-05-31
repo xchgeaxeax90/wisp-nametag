@@ -12,3 +12,9 @@ void setup_gpio(void){
     GPIO_P5_SetMode(GPIO_Pin_4,
                     GPIO_Mode_Output_PP);
 }
+
+void disable_pins(void){
+    GPIO_P1_SetMode(GPIO_Pin_All, GPIO_Mode_Input_HIP);
+    GPIO_P3_SetMode(GPIO_Pin_All, GPIO_Mode_Input_HIP);
+    GPIO_P5_SetMode(GPIO_Pin_All, GPIO_Mode_Input_HIP);
+}

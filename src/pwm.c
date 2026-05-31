@@ -79,6 +79,14 @@ void setup_pwm(void){
 
 
 void stop_pwm(void){
+    SFRX_ON();
+    PWMA_CR1 = 0;
+    PWMB_CR1 = 0;
+    PWMA_BKR = 0;
+    PWMB_BKR = 0;
+    PWMA_ENO = 0;
+    PWMB_ENO = 0;
+    SFRX_OFF();
 }
 
 static uint8_t brightness = 0x40;

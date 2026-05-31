@@ -21,3 +21,5 @@
 #define CATHODE1_PIN_BIT P15
 
 void setup_gpio(void);
+
+void disable_pins(void);
