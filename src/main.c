@@ -23,22 +23,10 @@ void poll_button(void){
 }
 
 /* Selects which cathode to enable */
-static volatile __BIT eye_en = 0;
-void write_multiplexed(void){
-    if(eye_en){
-        /* Cathode 0 is connected to the eyes, it should be low */
-        CATHODE0_PIN_BIT = RESET;
-        CATHODE1_PIN_BIT = SET;
-    } else {
-
-        CATHODE0_PIN_BIT = SET;
-        CATHODE1_PIN_BIT = RESET;
-    }
-    write_pwm_multiplexed(&animation_ptr->pwm_settings, eye_en);
-}
 
 // Called periodically by TCB0 to update the multiplexing for the eyes and top LEDs
 
+static volatile __BIT eye_en = 0;
 INTERRUPT_USING(Timer2_Routine, EXTI_VectTimer2, 1) {
     poll_button();
     /* Disable cathodes */
@@ -46,10 +34,30 @@ INTERRUPT_USING(Timer2_Routine, EXTI_VectTimer2, 1) {
 
         write_pwm(&animation_ptr->pwm_settings);
     }
-    write_multiplexed();
-    eye_en = !eye_en;
-
+    /* Disable both cathodes between PWM setting update and when the
+    setting is loaded to the capture compare unit */
+    CATHODE0_PIN_BIT = SET;
+    CATHODE1_PIN_BIT = SET;
+    write_pwm_multiplexed(&animation_ptr->pwm_settings, eye_en);
     /* Enable the interrupt for PWM overflow to synchronize cathode updates to PWM period */
+
+    /* Enable the PWM update interrupt so the cathode setting can be updated synchronously to the PWM capture compare unit */
+    SFRX_SET(PWMA_IER, 0);
+}
+
+INTERRUPT_USING(PWMA_Routine, EXTI_VectPWMA, 2) {
+
+    if(eye_en){
+        /* Cathode 0 is connected to the eyes, it should be low */
+        CATHODE0_PIN_BIT = RESET;
+        CATHODE1_PIN_BIT = SET;
+    } else {
+        /* Cathode 1 is connected to the head, it should be low */
+        CATHODE0_PIN_BIT = SET;
+        CATHODE1_PIN_BIT = RESET;
+    }
+    eye_en = !eye_en;
+    SFRX_RESET(PWMA_IER, 0);
 }
 
 void deep_sleep(void){
