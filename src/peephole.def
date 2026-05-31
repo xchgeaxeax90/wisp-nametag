@@ -1,0 +1,18 @@
+replace {
+   inc dptr
+   clr a
+   movc a,@a+dptr
+} by {
+  mov a,#1
+  movc a,@a+dptr
+}
+
+replace restart {
+   inc dptr
+   mov a,#%1
+   movc a,@a+dptr
+} by {
+  mov a,#(1+%1)
+  movc a,@a+dptr
+}
+

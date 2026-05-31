@@ -32,13 +32,13 @@ INTERRUPT_USING(Timer2_Routine, EXTI_VectTimer2, 1) {
     /* Disable cathodes */
     if(update_animation()){
 
-        write_pwm(&animation_ptr->pwm_settings);
+        write_pwm();
     }
     /* Disable both cathodes between PWM setting update and when the
     setting is loaded to the capture compare unit */
     CATHODE0_PIN_BIT = SET;
     CATHODE1_PIN_BIT = SET;
-    write_pwm_multiplexed(&animation_ptr->pwm_settings, eye_en);
+    write_pwm_multiplexed(eye_en);
     /* Enable the interrupt for PWM overflow to synchronize cathode updates to PWM period */
 
     /* Enable the PWM update interrupt so the cathode setting can be updated synchronously to the PWM capture compare unit */

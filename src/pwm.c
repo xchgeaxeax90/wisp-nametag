@@ -1,5 +1,6 @@
 #include "pwm.h"
 #include "fw_hal.h"
+#include "animation.h"
 
 #define PWM_CCMR \
     (0x0 << 0) |                  /* CCS = 0 - output */ \
@@ -89,20 +90,22 @@ void stop_pwm(void){
     SFRX_OFF();
 }
 
-static uint8_t brightness = 0x40;
+uint8_t brightness = 0x40;
 
-static inline uint8_t scale_pwm(uint8_t pwm_in){
+static uint8_t scale_pwm(uint8_t pwm_in){
     uint16_t product = pwm_in * brightness;
     return product >> 8;
 }
 
-void write_pwm(const __CODE pwm_settings_t *pwm_settings){
-    uint8_t light_l = scale_pwm(pwm_settings->light_l);
-    uint8_t light_r = scale_pwm(pwm_settings->light_r);
-    uint8_t face_bot_l = scale_pwm(pwm_settings->face_bot_l);
-    uint8_t face_bot_c = scale_pwm(pwm_settings->face_bot_c);
-    uint8_t face_bot_r = scale_pwm(pwm_settings->face_bot_r);
-    uint8_t face_top_c = scale_pwm(pwm_settings->face_top_c);
+extern const __CODE animation_data_t *animation_ptr;
+
+void write_pwm(void){
+    uint8_t light_l = scale_pwm(animation_ptr->pwm_settings.light_l);
+    uint8_t light_r = scale_pwm(animation_ptr->pwm_settings.light_r);
+    uint8_t face_bot_l = scale_pwm(animation_ptr->pwm_settings.face_bot_l);
+    uint8_t face_bot_c = scale_pwm(animation_ptr->pwm_settings.face_bot_c);
+    uint8_t face_bot_r = scale_pwm(animation_ptr->pwm_settings.face_bot_r);
+    uint8_t face_top_c = scale_pwm(animation_ptr->pwm_settings.face_top_c);
     SFRX_ON();
     PWMA_CCR2L = light_l;
     PWMA_CCR3L = face_top_c;
@@ -113,15 +116,15 @@ void write_pwm(const __CODE pwm_settings_t *pwm_settings){
     SFRX_OFF();
 }
 
-void write_pwm_multiplexed(const __CODE pwm_settings_t *pwm_settings, __idata uint8_t eye_sel) {
+void write_pwm_multiplexed(__idata uint8_t eye_sel) {
     uint8_t face_eye_l = 0;
     uint8_t face_eye_r = 0;
     if(eye_sel){
-        face_eye_l = pwm_settings->eye_l;
-        face_eye_r = pwm_settings->eye_r;
+        face_eye_l = animation_ptr->pwm_settings.eye_l;
+        face_eye_r = animation_ptr->pwm_settings.eye_r;
     } else {
-        face_eye_l = pwm_settings->face_top_l;
-        face_eye_r = pwm_settings->face_top_r;
+        face_eye_l = animation_ptr->pwm_settings.face_top_l;
+        face_eye_r = animation_ptr->pwm_settings.face_top_r;
     }
     face_eye_l = scale_pwm(face_eye_l);
     face_eye_r = scale_pwm(face_eye_r);
@@ -135,5 +138,5 @@ void select_brightness(void) {
     if(brightness <= 0x8)
 	brightness = 0xff;
     else
-	brightness = brightness / 2;
+	brightness = brightness >> 1;
 }
