@@ -79,33 +79,33 @@ int main(void){
 
     sei();
     while(1){
-	cli();
-	uint16_t timeout = button_timeout;
-	uint8_t state = button_state;
-	sei();
-	if(state == 0 && timeout > 20 && timeout < 300){
-	    short_button_press();
-	}
-	if(state == 0 && timeout >= 300 && timeout < 700){
-	    long_button_press();
-	}
-	/* use == instead of >= so as not to continuously call
-	select_off_animation() every time we poll the button
-	state. Doing so causes update_animation to never fire because
-	the animation timeout is never reached */
-	if(state == 1 && timeout == 700){
-	    select_off_animation();
-	}
-	if(state == 0 && timeout >= 700){
-	    deep_sleep();
-	}
-	if(state == 0 && timeout != 0){
-	    cli();
-	    button_timeout = 0;
-	    sei();
-	}
-	set_sleep_mode(SLEEP_MODE_IDLE);
-	sleep_mode();
+        cli();
+        uint16_t timeout = button_timeout;
+        uint8_t state = button_state;
+        sei();
+        if(state == 0 && timeout > 20 && timeout < 300){
+            short_button_press();
+        }
+        if(state == 0 && timeout >= 300 && timeout < 700){
+            long_button_press();
+        }
+        /* use == instead of >= so as not to continuously call
+           select_off_animation() every time we poll the button
+           state. Doing so causes update_animation to never fire because
+           the animation timeout is never reached */
+        if(state == 1 && timeout == 700){
+            select_off_animation();
+        }
+        if(state == 0 && timeout >= 700){
+            deep_sleep();
+        }
+        if(state == 0 && timeout != 0){
+            cli();
+            button_timeout = 0;
+            sei();
+        }
+        set_sleep_mode(SLEEP_MODE_IDLE);
+        sleep_mode();
     }
 }
 
