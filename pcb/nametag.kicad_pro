@@ -261,7 +261,12 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "power_pin_not_driven|1409700|558800|1931595b-ac30-4aae-b1e9-8ec2487ac62c|00000000-0000-0000-0000-000000000000|/a7c50b29-e914-4aee-9ec8-81f37f7bd068/858a59c4-d6e3-4a1e-955d-510d1161f2bb|/a7c50b29-e914-4aee-9ec8-81f37f7bd068/858a59c4-d6e3-4a1e-955d-510d1161f2bb|",
+        ""
+      ]
+    ],
     "meta": {
       "version": 0
     },
@@ -611,6 +616,24 @@
           "label": "LCSC",
           "name": "LCSC",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Type",
+          "name": "Sim.Type",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Device",
+          "name": "Sim.Device",
+          "show": false
         }
       ],
       "filter_string": "",

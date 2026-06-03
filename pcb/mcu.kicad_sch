@@ -1217,6 +1217,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Try the QFN-20 variant, it's like half the price"
+		(exclude_from_sim no)
+		(at 168.148 19.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "862cc961-86d8-4f9a-a35d-295f5c962e8d")
+	)
 	(junction
 		(at 205.74 127)
 		(diameter 0)
@@ -1228,6 +1238,22 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a80041e6-9ac0-47aa-bf37-083f37ba4f08")
+	)
+	(no_connect
+		(at 195.58 38.1)
+		(uuid "1754d6ff-de7c-4dd4-afb9-990602c3dd86")
+	)
+	(no_connect
+		(at 97.79 35.56)
+		(uuid "1ef5dbad-0468-4ac7-930f-e4b9c583e90c")
+	)
+	(no_connect
+		(at 195.58 40.64)
+		(uuid "27c25282-5c4a-4c1b-9d90-325b5cc646fa")
+	)
+	(no_connect
+		(at 97.79 30.48)
+		(uuid "3dd2ec70-d926-40f3-a6e4-92029cfe4e7e")
 	)
 	(bus_entry
 		(at 208.28 43.18)

@@ -501,6 +501,16 @@
 		)
 		(uuid "b74759c7-47eb-40d8-9200-49e28eb87b25")
 	)
+	(text "Check to make sure the PCB footprint agrees with the diode orientation"
+		(exclude_from_sim no)
+		(at 118.11 73.914 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "be038423-31ac-4ee8-9b96-8edf9033d12c")
+	)
 	(text "Eye/Face Top L\n"
 		(exclude_from_sim no)
 		(at 169.418 134.112 0)
@@ -1463,7 +1473,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "Teal Green (505nm) or emerald green (520nm) for face"
 			(at 130.81 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -1485,7 +1495,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C5336656"
+		(property "LCSC" "C779453"
 			(at 130.81 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -1661,7 +1671,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "Orange LED for lightsticks"
 			(at 140.97 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -1766,7 +1776,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "Cyan (496nm) for eyes"
 			(at 182.88 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -1871,7 +1881,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "Orange LED for lightsticks"
 			(at 148.59 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -2255,7 +2265,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "Orange LED for lightsticks"
 			(at 132.08 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -2531,7 +2541,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "Orange LED for lightsticks"
 			(at 116.84 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -2636,7 +2646,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "Teal Green (505nm) or emerald green (520nm) for face"
 			(at 121.92 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -2658,7 +2668,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C5336656"
+		(property "LCSC" "C779453"
 			(at 121.92 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -2741,7 +2751,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "Orange LED for lightsticks"
 			(at 101.6 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -2846,7 +2856,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "Teal Green (505nm) or emerald green (520nm) for face"
 			(at 170.18 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -2868,7 +2878,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C5336656"
+		(property "LCSC" "C779453"
 			(at 170.18 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -3122,7 +3132,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "Teal Green (505nm) or emerald green (520nm) for face"
 			(at 193.04 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -3144,7 +3154,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C5336656"
+		(property "LCSC" "C779453"
 			(at 193.04 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -3320,7 +3330,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "Teal Green (505nm) or emerald green (520nm) for face"
 			(at 101.6 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -3342,7 +3352,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C5336656"
+		(property "LCSC" "C779453"
 			(at 101.6 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -3425,7 +3435,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "Orange LED for lightsticks"
 			(at 109.22 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -3608,7 +3618,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "Orange LED for lightsticks"
 			(at 156.21 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -3713,7 +3723,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "Orange LED for lightsticks"
 			(at 92.71 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -3818,7 +3828,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "Teal Green (505nm) or emerald green (520nm) for face"
 			(at 90.17 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -3840,7 +3850,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C5336656"
+		(property "LCSC" "C779453"
 			(at 90.17 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -3923,7 +3933,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "Cyan (496nm) for eyes"
 			(at 161.29 146.05 0)
 			(hide yes)
 			(show_name no)
