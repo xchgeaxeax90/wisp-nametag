@@ -82,8 +82,15 @@ void deep_sleep(void){
     /* select_animation(); */
 }
 
+/* With no clock division, the multiplexing runs at 121Hz and PWM runs at 93 kHz */
+/* At 1MHz, the multiplexing runs at 114Hz, and the PWM at 3.9 kHz */
+
+void setup_clock(void){
+    RCC_SetCLKDivider(24);
+}
 
 int main(void){
+    setup_clock();
     //SYS_SetClock();
     setup_gpio();
     setup_pwm();
