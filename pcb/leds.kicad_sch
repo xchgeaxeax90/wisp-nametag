@@ -1336,7 +1336,7 @@
 		(uuid "61cc058d-2768-41c4-af94-31769ca7258b")
 	)
 	(label "pwm6"
-		(at 101.6 128.27 0)
+		(at 101.6 80.01 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1356,7 +1356,7 @@
 		(uuid "7cb6b8f9-0745-45be-a4dc-342a67a8e561")
 	)
 	(label "pwm2"
-		(at 101.6 80.01 0)
+		(at 130.81 128.27 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1366,7 +1366,7 @@
 		(uuid "82f5bcca-c69e-4722-b7a3-cedfcff798e1")
 	)
 	(label "pwm3"
-		(at 90.17 128.27 0)
+		(at 101.6 128.27 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1396,7 +1396,7 @@
 		(uuid "d5b89661-2760-46ed-86d4-7f57e1c53ead")
 	)
 	(label "pwm5"
-		(at 130.81 128.27 0)
+		(at 90.17 129.54 0)
 		(effects
 			(font
 				(size 1.27 1.27)

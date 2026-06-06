@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/home/mnolan/programming/avr/nametag/pcb/nametag.kicad_sch</source>
-    <date>2026-06-02T21:13:00</date>
+    <date>2026-06-02T22:48:35</date>
     <tool>Eeschema 10.0.3</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -240,44 +240,45 @@
         </unit>
       </units>
     </comp>
-    <comp ref="U1">
-      <value>STC8H1K08-TSSOP20</value>
-      <footprint>Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm</footprint>
+    <comp ref="U3">
+      <value>STC8H1K08-QFN20</value>
+      <footprint>Package_DFN_QFN:QFN-20-1EP_3x3mm_P0.4mm_EP1.65x1.65mm</footprint>
       <fields>
-        <field name="LCSC"> C915673</field>
-        <field name="Footprint">Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm</field>
+        <field name="LCSC">C915674</field>
+        <field name="Footprint">Package_DFN_QFN:QFN-20-1EP_3x3mm_P0.4mm_EP1.65x1.65mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
-      <libsource lib="stc8h" part="STC8H1K08" description=""/>
-      <property name="LCSC" value=" C915673"/>
+      <libsource lib="stc8h" part="STC8H1K08-QFN20" description=""/>
+      <property name="LCSC" value="C915674"/>
       <property name="Sheetname" value="Mcu"/>
       <property name="Sheetfile" value="mcu.kicad_sch"/>
       <sheetpath names="/Mcu/" tstamps="/858a59c4-d6e3-4a1e-955d-510d1161f2bb/"/>
-      <tstamps>b56fdaa7-a0db-4f08-8a88-9088553c057e</tstamps>
+      <tstamps>1967b619-3cee-4a47-a02b-20047c6e674f</tstamps>
       <units>
         <unit name="A">
           <pins>
-            <pin num="19"/>
+            <pin num="16"/>
             <pin num="20"/>
+            <pin num="19"/>
+            <pin num="18"/>
+            <pin num="17"/>
             <pin num="1"/>
             <pin num="2"/>
             <pin num="3"/>
             <pin num="4"/>
-            <pin num="5"/>
             <pin num="6"/>
+            <pin num="5"/>
+            <pin num="21"/>
             <pin num="7"/>
-            <pin num="9"/>
             <pin num="8"/>
+            <pin num="9"/>
             <pin num="10"/>
             <pin num="11"/>
             <pin num="12"/>
             <pin num="13"/>
             <pin num="14"/>
             <pin num="15"/>
-            <pin num="16"/>
-            <pin num="17"/>
-            <pin num="18"/>
           </pins>
         </unit>
       </units>
@@ -285,12 +286,13 @@
     <comp ref="D1">
       <value>LTST-C190KFKT</value>
       <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <datasheet>Orange LED for lightsticks</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C157740 </field>
         <field name="Sim.Pins">1=K 2=A</field>
         <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">Orange LED for lightsticks</field>
         <field name="Description">Light emitting diode</field>
       </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
@@ -314,12 +316,13 @@
     <comp ref="D2">
       <value>LTST-C190KFKT</value>
       <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <datasheet>Orange LED for lightsticks</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C157740 </field>
         <field name="Sim.Pins">1=K 2=A</field>
         <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">Orange LED for lightsticks</field>
         <field name="Description">Light emitting diode</field>
       </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
@@ -343,12 +346,13 @@
     <comp ref="D3">
       <value>LTST-C190KFKT</value>
       <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <datasheet>Orange LED for lightsticks</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C157740 </field>
         <field name="Sim.Pins">1=K 2=A</field>
         <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">Orange LED for lightsticks</field>
         <field name="Description">Light emitting diode</field>
       </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
@@ -372,12 +376,13 @@
     <comp ref="D4">
       <value>LTST-C190KFKT</value>
       <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <datasheet>Orange LED for lightsticks</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C157740 </field>
         <field name="Sim.Pins">1=K 2=A</field>
         <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">Orange LED for lightsticks</field>
         <field name="Description">Light emitting diode</field>
       </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
@@ -401,12 +406,13 @@
     <comp ref="D5">
       <value>LTST-C190KFKT</value>
       <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <datasheet>Orange LED for lightsticks</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C157740 </field>
         <field name="Sim.Pins">1=K 2=A</field>
         <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">Orange LED for lightsticks</field>
         <field name="Description">Light emitting diode</field>
       </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
@@ -430,12 +436,13 @@
     <comp ref="D6">
       <value>LTST-C190KFKT</value>
       <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <datasheet>Orange LED for lightsticks</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C157740 </field>
         <field name="Sim.Pins">1=K 2=A</field>
         <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">Orange LED for lightsticks</field>
         <field name="Description">Light emitting diode</field>
       </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
@@ -459,12 +466,13 @@
     <comp ref="D7">
       <value>LTST-C190KFKT</value>
       <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <datasheet>Orange LED for lightsticks</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C157740 </field>
         <field name="Sim.Pins">1=K 2=A</field>
         <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">Orange LED for lightsticks</field>
         <field name="Description">Light emitting diode</field>
       </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
@@ -488,12 +496,13 @@
     <comp ref="D8">
       <value>LTST-C190KFKT</value>
       <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <datasheet>Orange LED for lightsticks</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C157740 </field>
         <field name="Sim.Pins">1=K 2=A</field>
         <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">Orange LED for lightsticks</field>
         <field name="Description">Light emitting diode</field>
       </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
@@ -517,16 +526,17 @@
     <comp ref="D9">
       <value>SMLD12E3N1WT86</value>
       <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <datasheet>Teal Green (505nm) or emerald green (520nm) for face</datasheet>
       <description>Light emitting diode</description>
       <fields>
-        <field name="LCSC">C5336656</field>
+        <field name="LCSC">C779453</field>
         <field name="Sim.Pins">1=K 2=A</field>
         <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">Teal Green (505nm) or emerald green (520nm) for face</field>
         <field name="Description">Light emitting diode</field>
       </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
-      <property name="LCSC" value="C5336656"/>
+      <property name="LCSC" value="C779453"/>
       <property name="Sim.Pins" value="1=K 2=A"/>
       <property name="Sheetname" value="leds"/>
       <property name="Sheetfile" value="leds.kicad_sch"/>
@@ -546,16 +556,17 @@
     <comp ref="D10">
       <value>SMLD12E3N1WT86</value>
       <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <datasheet>Teal Green (505nm) or emerald green (520nm) for face</datasheet>
       <description>Light emitting diode</description>
       <fields>
-        <field name="LCSC">C5336656</field>
+        <field name="LCSC">C779453</field>
         <field name="Sim.Pins">1=K 2=A</field>
         <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">Teal Green (505nm) or emerald green (520nm) for face</field>
         <field name="Description">Light emitting diode</field>
       </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
-      <property name="LCSC" value="C5336656"/>
+      <property name="LCSC" value="C779453"/>
       <property name="Sim.Pins" value="1=K 2=A"/>
       <property name="Sheetname" value="leds"/>
       <property name="Sheetfile" value="leds.kicad_sch"/>
@@ -575,16 +586,17 @@
     <comp ref="D11">
       <value>SMLD12E3N1WT86</value>
       <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <datasheet>Teal Green (505nm) or emerald green (520nm) for face</datasheet>
       <description>Light emitting diode</description>
       <fields>
-        <field name="LCSC">C5336656</field>
+        <field name="LCSC">C779453</field>
         <field name="Sim.Pins">1=K 2=A</field>
         <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">Teal Green (505nm) or emerald green (520nm) for face</field>
         <field name="Description">Light emitting diode</field>
       </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
-      <property name="LCSC" value="C5336656"/>
+      <property name="LCSC" value="C779453"/>
       <property name="Sim.Pins" value="1=K 2=A"/>
       <property name="Sheetname" value="leds"/>
       <property name="Sheetfile" value="leds.kicad_sch"/>
@@ -604,16 +616,17 @@
     <comp ref="D12">
       <value>SMLD12E3N1WT86</value>
       <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <datasheet>Teal Green (505nm) or emerald green (520nm) for face</datasheet>
       <description>Light emitting diode</description>
       <fields>
-        <field name="LCSC">C5336656</field>
+        <field name="LCSC">C779453</field>
         <field name="Sim.Pins">1=K 2=A</field>
         <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">Teal Green (505nm) or emerald green (520nm) for face</field>
         <field name="Description">Light emitting diode</field>
       </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
-      <property name="LCSC" value="C5336656"/>
+      <property name="LCSC" value="C779453"/>
       <property name="Sim.Pins" value="1=K 2=A"/>
       <property name="Sheetname" value="leds"/>
       <property name="Sheetfile" value="leds.kicad_sch"/>
@@ -633,16 +646,17 @@
     <comp ref="D13">
       <value>SMLD12E3N1WT86</value>
       <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <datasheet>Teal Green (505nm) or emerald green (520nm) for face</datasheet>
       <description>Light emitting diode</description>
       <fields>
-        <field name="LCSC">C5336656</field>
+        <field name="LCSC">C779453</field>
         <field name="Sim.Pins">1=K 2=A</field>
         <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">Teal Green (505nm) or emerald green (520nm) for face</field>
         <field name="Description">Light emitting diode</field>
       </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
-      <property name="LCSC" value="C5336656"/>
+      <property name="LCSC" value="C779453"/>
       <property name="Sim.Pins" value="1=K 2=A"/>
       <property name="Sheetname" value="leds"/>
       <property name="Sheetfile" value="leds.kicad_sch"/>
@@ -662,16 +676,17 @@
     <comp ref="D14">
       <value>SMLD12E3N1WT86</value>
       <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <datasheet>Teal Green (505nm) or emerald green (520nm) for face</datasheet>
       <description>Light emitting diode</description>
       <fields>
-        <field name="LCSC">C5336656</field>
+        <field name="LCSC">C779453</field>
         <field name="Sim.Pins">1=K 2=A</field>
         <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">Teal Green (505nm) or emerald green (520nm) for face</field>
         <field name="Description">Light emitting diode</field>
       </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
-      <property name="LCSC" value="C5336656"/>
+      <property name="LCSC" value="C779453"/>
       <property name="Sim.Pins" value="1=K 2=A"/>
       <property name="Sheetname" value="leds"/>
       <property name="Sheetfile" value="leds.kicad_sch"/>
@@ -691,12 +706,13 @@
     <comp ref="D15">
       <value>SMLD12E2N1WT86</value>
       <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <datasheet>Cyan (496nm) for eyes</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C2846641</field>
         <field name="Sim.Pins">1=K 2=A</field>
         <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">Cyan (496nm) for eyes</field>
         <field name="Description">Light emitting diode</field>
       </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
@@ -720,12 +736,13 @@
     <comp ref="D16">
       <value>SMLD12E2N1WT86</value>
       <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <datasheet>Cyan (496nm) for eyes</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C2846641</field>
         <field name="Sim.Pins">1=K 2=A</field>
         <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">Cyan (496nm) for eyes</field>
         <field name="Description">Light emitting diode</field>
       </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
@@ -1106,35 +1123,37 @@
         <pin num="3" name="VOUT" type="power_out"/>
       </pins>
     </libpart>
-    <libpart lib="stc8h" part="STC8H1K08">
+    <libpart lib="stc8h" part="STC8H1K08-QFN20">
       <fields>
-        <field name="Reference">U</field>
-        <field name="Value"/>
-        <field name="Footprint"/>
+        <field name="Reference">U1</field>
+        <field name="Value">STC8H1K08-QFN20</field>
+        <field name="Footprint">Package_DFN_QFN:QFN-20-1EP_3x3mm_P0.4mm_EP1.65x1.65mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
+        <field name="LCSC"> C915673</field>
       </fields>
       <pins>
-        <pin num="1" name="P1.2/SS/T2/PWM2P" type="bidirectional"/>
-        <pin num="2" name="P1.3/MOSI/T2CLKO/PWM2N" type="bidirectional"/>
-        <pin num="3" name="P1.4/MISO/I2CSDA/PWM3N" type="bidirectional"/>
-        <pin num="4" name="P1.5/SCLK/I2CSCL/PWM3N" type="bidirectional"/>
-        <pin num="5" name="P1.6/RxD_3/MCLKO_2/XTALO/PWM4P" type="bidirectional"/>
-        <pin num="6" name="P1.7/TxD_3/XTALI/PWM5_2/PWM4N" type="bidirectional"/>
-        <pin num="7" name="P5.4/MCLKO/RST/PWM6_2" type="bidirectional"/>
-        <pin num="8" name="VCC" type="power_in"/>
-        <pin num="9" name="ADC_VRef+" type="input"/>
-        <pin num="10" name="GND" type="power_in"/>
-        <pin num="11" name="INT4/RxD/ADC8/P3.0" type="bidirectional"/>
-        <pin num="12" name="TxD/ADC9/P3.1" type="bidirectional"/>
-        <pin num="13" name="PWMETI/PWMETI2/INT0/SCLK_4/I2CSCL_4/ADC10/P3.2" type="bidirectional"/>
-        <pin num="14" name="PWM4N_2/PWM7_2/INT1/MISO_4/I2CSDA_4/ADC11/P3.3" type="bidirectional"/>
-        <pin num="15" name="PWM4P_2/PWM8_2/CMPO/ECI_2/T1CLKO/MOSI_4/T0/ADC12/P3.4" type="bidirectional"/>
-        <pin num="16" name="PWMFLT/SS_4/T0CLKO/T1/ADC13/P3.5" type="bidirectional"/>
-        <pin num="17" name="INT2/CCP1_2/RxD_2/ADC14/P3.6" type="bidirectional"/>
-        <pin num="18" name="INT3//TxD_2/P3.7" type="bidirectional"/>
-        <pin num="19" name="P1.0/ADC0/RxD2/PWM1P" type="bidirectional"/>
+        <pin num="1" name="P1.5/SCLK/I2CSCL/PWM3N" type="bidirectional"/>
+        <pin num="2" name="P1.6/RxD_3/MCLKO_2/XTALO/PWM4P" type="bidirectional"/>
+        <pin num="3" name="P1.7/TxD_3/XTALI/PWM5_2/PWM4N" type="bidirectional"/>
+        <pin num="4" name="P5.4/MCLKO/RST/PWM6_2" type="bidirectional"/>
+        <pin num="5" name="VCC" type="power_in"/>
+        <pin num="6" name="ADC_VRef+" type="input"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="INT4/RxD/ADC8/P3.0" type="bidirectional"/>
+        <pin num="9" name="TxD/ADC9/P3.1" type="bidirectional"/>
+        <pin num="10" name="PWMETI/PWMETI2/INT0/SCLK_4/I2CSCL_4/ADC10/P3.2" type="bidirectional"/>
+        <pin num="11" name="PWM4N_2/PWM7_2/INT1/MISO_4/I2CSDA_4/ADC11/P3.3" type="bidirectional"/>
+        <pin num="12" name="PWM4P_2/PWM8_2/CMPO/ECI_2/T1CLKO/MOSI_4/T0/ADC12/P3.4" type="bidirectional"/>
+        <pin num="13" name="PWMFLT/SS_4/T0CLKO/T1/ADC13/P3.5" type="bidirectional"/>
+        <pin num="14" name="INT2/CCP1_2/RxD_2/ADC14/P3.6" type="bidirectional"/>
+        <pin num="15" name="INT3//TxD_2/P3.7" type="bidirectional"/>
+        <pin num="16" name="P1.0/ADC0/RxD2/PWM1P" type="bidirectional"/>
+        <pin num="17" name="P1.4/MISO/I2CSDA/PWM3N" type="bidirectional"/>
+        <pin num="18" name="P1.3/MOSI/T2CLKO/PWM2N" type="bidirectional"/>
+        <pin num="19" name="P1.2/SS/T2/PWM2P" type="bidirectional"/>
         <pin num="20" name="P1.1/ADC1/TxD2/PWM1N" type="bidirectional"/>
+        <pin num="21" name="EP" type="power_in"/>
       </pins>
     </libpart>
   </libparts>
@@ -1159,61 +1178,61 @@
     <net code="1" name="+3.3V" class="Default">
       <node ref="C1" pin="1" pintype="passive"/>
       <node ref="C2" pin="1" pintype="passive"/>
-      <node ref="U1" pin="8" pinfunction="VCC_8" pintype="power_in"/>
-      <node ref="U1" pin="9" pinfunction="ADC_VRef+_9" pintype="input"/>
       <node ref="U2" pin="3" pinfunction="VOUT_3" pintype="power_out"/>
+      <node ref="U3" pin="5" pinfunction="VCC_5" pintype="power_in"/>
+      <node ref="U3" pin="6" pinfunction="ADC_VRef+_6" pintype="input"/>
     </net>
     <net code="2" name="/Mcu/UART_RX" class="Default">
-      <node ref="U1" pin="11" pinfunction="INT4/RxD/ADC8/P3.0_11" pintype="bidirectional"/>
+      <node ref="U3" pin="8" pinfunction="INT4/RxD/ADC8/P3.0_8" pintype="bidirectional"/>
     </net>
     <net code="3" name="/Mcu/UART_TX" class="Default">
-      <node ref="U1" pin="12" pinfunction="TxD/ADC9/P3.1_12" pintype="bidirectional"/>
+      <node ref="U3" pin="9" pinfunction="TxD/ADC9/P3.1_9" pintype="bidirectional"/>
     </net>
     <net code="4" name="/Mcu/cathode0" class="Default">
       <node ref="D15" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D16" pin="1" pinfunction="K_1" pintype="passive"/>
-      <node ref="U1" pin="18" pinfunction="INT3//TxD_2/P3.7_18" pintype="bidirectional"/>
+      <node ref="U3" pin="18" pinfunction="P1.3/MOSI/T2CLKO/PWM2N_18" pintype="bidirectional"/>
     </net>
     <net code="5" name="/Mcu/cathode1" class="Default">
       <node ref="D11" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D12" pin="1" pinfunction="K_1" pintype="passive"/>
-      <node ref="U1" pin="4" pinfunction="P1.5/SCLK/I2CSCL/PWM3N_4" pintype="bidirectional"/>
+      <node ref="U3" pin="1" pinfunction="P1.5/SCLK/I2CSCL/PWM3N_1" pintype="bidirectional"/>
     </net>
     <net code="7" name="/Mcu/pwm1" class="Default">
       <node ref="R7" pin="1" pintype="passive"/>
-      <node ref="U1" pin="19" pinfunction="P1.0/ADC0/RxD2/PWM1P_19" pintype="bidirectional"/>
+      <node ref="U3" pin="16" pinfunction="P1.0/ADC0/RxD2/PWM1P_16" pintype="bidirectional"/>
     </net>
     <net code="8" name="/Mcu/pwm2" class="Default">
-      <node ref="R1" pin="1" pintype="passive"/>
-      <node ref="U1" pin="1" pinfunction="P1.2/SS/T2/PWM2P_1" pintype="bidirectional"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="U3" pin="19" pinfunction="P1.2/SS/T2/PWM2P_19" pintype="bidirectional"/>
     </net>
     <net code="9" name="/Mcu/pwm3" class="Default">
-      <node ref="R3" pin="1" pintype="passive"/>
-      <node ref="U1" pin="3" pinfunction="P1.4/MISO/I2CSDA/PWM3N_3" pintype="bidirectional"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="U3" pin="17" pinfunction="P1.4/MISO/I2CSDA/PWM3N_17" pintype="bidirectional"/>
     </net>
     <net code="10" name="/Mcu/pwm4" class="Default">
       <node ref="R8" pin="1" pintype="passive"/>
-      <node ref="U1" pin="5" pinfunction="P1.6/RxD_3/MCLKO_2/XTALO/PWM4P_5" pintype="bidirectional"/>
+      <node ref="U3" pin="2" pinfunction="P1.6/RxD_3/MCLKO_2/XTALO/PWM4P_2" pintype="bidirectional"/>
     </net>
     <net code="11" name="/Mcu/pwm5" class="Default">
-      <node ref="R6" pin="1" pintype="passive"/>
-      <node ref="U1" pin="6" pinfunction="P1.7/TxD_3/XTALI/PWM5_2/PWM4N_6" pintype="bidirectional"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="U3" pin="3" pinfunction="P1.7/TxD_3/XTALI/PWM5_2/PWM4N_3" pintype="bidirectional"/>
     </net>
     <net code="12" name="/Mcu/pwm6" class="Default">
-      <node ref="R4" pin="1" pintype="passive"/>
-      <node ref="U1" pin="7" pinfunction="P5.4/MCLKO/RST/PWM6_2_7" pintype="bidirectional"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="U3" pin="4" pinfunction="P5.4/MCLKO/RST/PWM6_2_4" pintype="bidirectional"/>
     </net>
     <net code="13" name="/Mcu/pwm7" class="Default">
       <node ref="R2" pin="1" pintype="passive"/>
-      <node ref="U1" pin="14" pinfunction="PWM4N_2/PWM7_2/INT1/MISO_4/I2CSDA_4/ADC11/P3.3_14" pintype="bidirectional"/>
+      <node ref="U3" pin="11" pinfunction="PWM4N_2/PWM7_2/INT1/MISO_4/I2CSDA_4/ADC11/P3.3_11" pintype="bidirectional"/>
     </net>
     <net code="14" name="/Mcu/pwm8" class="Default">
       <node ref="R5" pin="1" pintype="passive"/>
-      <node ref="U1" pin="15" pinfunction="PWM4P_2/PWM8_2/CMPO/ECI_2/T1CLKO/MOSI_4/T0/ADC12/P3.4_15" pintype="bidirectional"/>
+      <node ref="U3" pin="12" pinfunction="PWM4P_2/PWM8_2/CMPO/ECI_2/T1CLKO/MOSI_4/T0/ADC12/P3.4_12" pintype="bidirectional"/>
     </net>
     <net code="16" name="/Mcu/switch" class="Default">
       <node ref="SW1" pin="1" pinfunction="A_1" pintype="passive"/>
-      <node ref="U1" pin="13" pinfunction="PWMETI/PWMETI2/INT0/SCLK_4/I2CSCL_4/ADC10/P3.2_13" pintype="bidirectional"/>
+      <node ref="U3" pin="10" pinfunction="PWMETI/PWMETI2/INT0/SCLK_4/I2CSCL_4/ADC10/P3.2_10" pintype="bidirectional"/>
     </net>
     <net code="17" name="GND" class="Default">
       <node ref="BT1" pin="2" pinfunction="-_2" pintype="passive"/>
@@ -1232,8 +1251,9 @@
       <node ref="D8" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D9" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="SW1" pin="2" pinfunction="B_2" pintype="passive"/>
-      <node ref="U1" pin="10" pinfunction="GND_10" pintype="power_in"/>
       <node ref="U2" pin="1" pinfunction="GND_1" pintype="power_in"/>
+      <node ref="U3" pin="21" pinfunction="EP_21" pintype="power_in"/>
+      <node ref="U3" pin="7" pinfunction="GND_7" pintype="power_in"/>
     </net>
     <net code="18" name="Net-(BT1-+)" class="Default">
       <node ref="BT1" pin="1" pinfunction="+_1" pintype="passive"/>
@@ -1283,17 +1303,17 @@
       <node ref="L1" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="U2" pin="2" pinfunction="SW_2" pintype="power_in"/>
     </net>
-    <net code="28" name="unconnected-(U1-INT2/CCP1_2/RxD_2/ADC14/P3.6-Pad17)" class="Default">
-      <node ref="U1" pin="17" pinfunction="INT2/CCP1_2/RxD_2/ADC14/P3.6_17" pintype="bidirectional+no_connect"/>
+    <net code="28" name="unconnected-(U3-INT2/CCP1_2/RxD_2/ADC14/P3.6-Pad14)" class="Default">
+      <node ref="U3" pin="14" pinfunction="INT2/CCP1_2/RxD_2/ADC14/P3.6_14" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="29" name="unconnected-(U1-P1.1/ADC1/TxD2/PWM1N-Pad20)" class="Default">
-      <node ref="U1" pin="20" pinfunction="P1.1/ADC1/TxD2/PWM1N_20" pintype="bidirectional+no_connect"/>
+    <net code="29" name="unconnected-(U3-INT3//TxD_2/P3.7-Pad15)" class="Default">
+      <node ref="U3" pin="15" pinfunction="INT3//TxD_2/P3.7_15" pintype="bidirectional"/>
     </net>
-    <net code="30" name="unconnected-(U1-P1.3/MOSI/T2CLKO/PWM2N-Pad2)" class="Default">
-      <node ref="U1" pin="2" pinfunction="P1.3/MOSI/T2CLKO/PWM2N_2" pintype="bidirectional+no_connect"/>
+    <net code="30" name="unconnected-(U3-P1.1/ADC1/TxD2/PWM1N-Pad20)" class="Default">
+      <node ref="U3" pin="20" pinfunction="P1.1/ADC1/TxD2/PWM1N_20" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="31" name="unconnected-(U1-PWMFLT/SS_4/T0CLKO/T1/ADC13/P3.5-Pad16)" class="Default">
-      <node ref="U1" pin="16" pinfunction="PWMFLT/SS_4/T0CLKO/T1/ADC13/P3.5_16" pintype="bidirectional+no_connect"/>
+    <net code="31" name="unconnected-(U3-PWMFLT/SS_4/T0CLKO/T1/ADC13/P3.5-Pad13)" class="Default">
+      <node ref="U3" pin="13" pinfunction="PWMFLT/SS_4/T0CLKO/T1/ADC13/P3.5_13" pintype="bidirectional+no_connect"/>
     </net>
   </nets>
 </export>
