@@ -2,4 +2,5 @@
 	(version 7)
 	(lib (name "Graphics") (type "KiCad") (uri "${KIPRJMOD}/Graphics.pretty") (options "") (descr ""))
 	(lib (name "jlcpcb") (type "KiCad") (uri "${KIPRJMOD}/schematic-libs/jlcpcb.pretty") (options "") (descr ""))
+	(lib (name "EasyEDA") (type "KiCad") (uri "${KIPRJMOD}/EasyEDA.pretty") (options "") (descr ""))
 )

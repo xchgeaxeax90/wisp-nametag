@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/home/mnolan/programming/avr/nametag/pcb/nametag.kicad_sch</source>
-    <date>2026-06-02T22:48:35</date>
+    <date>2026-06-07T14:25:12</date>
     <tool>Eeschema 10.0.3</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -79,31 +79,40 @@
   </design>
   <components>
     <comp ref="BT1">
-      <value>C5290189</value>
-      <footprint>Battery:BatteryHolder_Keystone_2466_1xAAA</footprint>
+      <value>BH-AAA-A1AJ001</value>
+      <footprint>EasyEDA:BAT-TH_BH-AAA-A1AJ001</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/C5290189.pdf</datasheet>
       <description>Single-cell battery</description>
       <fields>
         <field name="Sim.Device">V</field>
         <field name="Sim.Type">DC</field>
         <field name="Sim.Pins">1=+ 2=-</field>
-        <field name="Footprint">Battery:BatteryHolder_Keystone_2466_1xAAA</field>
-        <field name="Datasheet"/>
+        <field name="LCSC">C5290189</field>
+        <field name="Manufacturer">MYOUNG(美阳)</field>
+        <field name="MPN">BH-AAA-A1AJ001</field>
+        <field name="LCSC Part">C5290189</field>
+        <field name="Footprint">EasyEDA:BAT-TH_BH-AAA-A1AJ001</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/C5290189.pdf</field>
         <field name="Description">Single-cell battery</field>
       </fields>
-      <libsource lib="Device" part="Battery_Cell" description="Single-cell battery"/>
+      <libsource lib="EasyEDA" part="BH-AAA-A1AJ001" description=""/>
       <property name="Sim.Device" value="V"/>
       <property name="Sim.Type" value="DC"/>
       <property name="Sim.Pins" value="1=+ 2=-"/>
+      <property name="LCSC" value="C5290189"/>
+      <property name="Manufacturer" value="MYOUNG(美阳)"/>
+      <property name="MPN" value="BH-AAA-A1AJ001"/>
+      <property name="LCSC Part" value="C5290189"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
-      <property name="ki_keywords" value="battery cell"/>
+      <property name="ki_keywords" value="Battery Connectors"/>
       <sheetpath names="/Power/" tstamps="/a48f65a2-3369-4655-9ad9-13ca4e244bfb/"/>
       <tstamps>eddeab0c-eb86-4359-81e3-c308b28f8679</tstamps>
       <units>
         <unit name="A">
           <pins>
-            <pin num="1"/>
             <pin num="2"/>
+            <pin num="1"/>
           </pins>
         </unit>
       </units>
@@ -137,11 +146,11 @@
     </comp>
     <comp ref="L1">
       <value>WIP201612S-2R2MLDG</value>
-      <footprint>Inductor_SMD:L_Wuerth_PMFI-201610_PMCI-compatible</footprint>
+      <footprint>EasyEDA:L0806</footprint>
       <description>Inductor</description>
       <fields>
         <field name="LCSC">C42215</field>
-        <field name="Footprint">Inductor_SMD:L_Wuerth_PMFI-201610_PMCI-compatible</field>
+        <field name="Footprint">EasyEDA:L0806</field>
         <field name="Datasheet"/>
         <field name="Description">Inductor</field>
       </fields>
@@ -164,11 +173,11 @@
     </comp>
     <comp ref="U2">
       <value>BL8536CB3TR36</value>
-      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <footprint>EasyEDA:SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR</footprint>
       <datasheet>http://www.ti.com/lit/ds/symlink/tps61322.pdf</datasheet>
       <description>1.2A Step-Up Converter, 3.6V Output Voltage, 0.9-5.5V Input Voltage, SOT-23</description>
       <fields>
-        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Footprint">EasyEDA:SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR</field>
         <field name="Datasheet">http://www.ti.com/lit/ds/symlink/tps61322.pdf</field>
         <field name="Description">1.2A Step-Up Converter, 3.6V Output Voltage, 0.9-5.5V Input Voltage, SOT-23</field>
       </fields>
@@ -191,11 +200,11 @@
     </comp>
     <comp ref="C2">
       <value>100n</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
       <description>Unpolarized capacitor</description>
       <fields>
         <field name="LCSC">C1525</field>
-        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description">Unpolarized capacitor</field>
       </fields>
@@ -218,10 +227,10 @@
     </comp>
     <comp ref="SW1">
       <value>TS-1088-AR02016</value>
-      <footprint>Button_Switch_SMD:SW_Push_SPST_NO_Alps_SKRK</footprint>
+      <footprint>EasyEDA:SW-SMD_L3.9-W3.0-P4.45</footprint>
       <description>Single Pole Single Throw (SPST) switch</description>
       <fields>
-        <field name="Footprint">Button_Switch_SMD:SW_Push_SPST_NO_Alps_SKRK</field>
+        <field name="Footprint">EasyEDA:SW-SMD_L3.9-W3.0-P4.45</field>
         <field name="Datasheet"/>
         <field name="Description">Single Pole Single Throw (SPST) switch</field>
       </fields>
@@ -242,10 +251,10 @@
     </comp>
     <comp ref="U3">
       <value>STC8H1K08-QFN20</value>
-      <footprint>Package_DFN_QFN:QFN-20-1EP_3x3mm_P0.4mm_EP1.65x1.65mm</footprint>
+      <footprint>EasyEDA:QFN-20_L3.0-W3.0-P0.40-BL-EP1.7</footprint>
       <fields>
         <field name="LCSC">C915674</field>
-        <field name="Footprint">Package_DFN_QFN:QFN-20-1EP_3x3mm_P0.4mm_EP1.65x1.65mm</field>
+        <field name="Footprint">EasyEDA:QFN-20_L3.0-W3.0-P0.40-BL-EP1.7</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -1000,23 +1009,6 @@
         <pin num="4" name="Pin_4" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Device" part="Battery_Cell">
-      <description>Single-cell battery</description>
-      <fields>
-        <field name="Reference">BT</field>
-        <field name="Value">Battery_Cell</field>
-        <field name="Footprint"/>
-        <field name="Datasheet"/>
-        <field name="Description">Single-cell battery</field>
-        <field name="Sim.Device">V</field>
-        <field name="Sim.Type">DC</field>
-        <field name="Sim.Pins">1=+ 2=-</field>
-      </fields>
-      <pins>
-        <pin num="1" name="+" type="passive"/>
-        <pin num="2" name="-" type="passive"/>
-      </pins>
-    </libpart>
     <libpart lib="Device" part="C">
       <description>Unpolarized capacitor</description>
       <footprints>
@@ -1088,6 +1080,23 @@
       <pins>
         <pin num="1" name="" type="passive"/>
         <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="EasyEDA" part="BH-AAA-A1AJ001">
+      <docs>https://www.lcsc.com/datasheet/C5290189.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">BH-AAA-A1AJ001</field>
+        <field name="Footprint">EasyEDA:BAT-TH_BH-AAA-A1AJ001</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/C5290189.pdf</field>
+        <field name="Description"/>
+        <field name="Manufacturer">MYOUNG(美阳)</field>
+        <field name="MPN">BH-AAA-A1AJ001</field>
+        <field name="LCSC Part">C5290189</field>
+      </fields>
+      <pins>
+        <pin num="1" name="-" type="power_in"/>
+        <pin num="2" name="+" type="power_in"/>
       </pins>
     </libpart>
     <libpart lib="Switch" part="SW_SPST">
@@ -1164,6 +1173,9 @@
     <library logical="Device">
       <uri>${KICAD10_SYMBOL_DIR}/Device.kicad_sym</uri>
     </library>
+    <library logical="EasyEDA">
+      <uri>${KIPRJMOD}/EasyEDA.kicad_sym</uri>
+    </library>
     <library logical="Switch">
       <uri>${KICAD10_SYMBOL_DIR}/Switch.kicad_sym</uri>
     </library>
@@ -1203,7 +1215,7 @@
       <node ref="U3" pin="16" pinfunction="P1.0/ADC0/RxD2/PWM1P_16" pintype="bidirectional"/>
     </net>
     <net code="8" name="/Mcu/pwm2" class="Default">
-      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
       <node ref="U3" pin="19" pinfunction="P1.2/SS/T2/PWM2P_19" pintype="bidirectional"/>
     </net>
     <net code="9" name="/Mcu/pwm3" class="Default">
@@ -1211,7 +1223,7 @@
       <node ref="U3" pin="17" pinfunction="P1.4/MISO/I2CSDA/PWM3N_17" pintype="bidirectional"/>
     </net>
     <net code="10" name="/Mcu/pwm4" class="Default">
-      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
       <node ref="U3" pin="2" pinfunction="P1.6/RxD_3/MCLKO_2/XTALO/PWM4P_2" pintype="bidirectional"/>
     </net>
     <net code="11" name="/Mcu/pwm5" class="Default">
@@ -1235,7 +1247,7 @@
       <node ref="U3" pin="10" pinfunction="PWMETI/PWMETI2/INT0/SCLK_4/I2CSCL_4/ADC10/P3.2_10" pintype="bidirectional"/>
     </net>
     <net code="17" name="GND" class="Default">
-      <node ref="BT1" pin="2" pinfunction="-_2" pintype="passive"/>
+      <node ref="BT1" pin="1" pinfunction="-_1" pintype="power_in"/>
       <node ref="C1" pin="2" pintype="passive"/>
       <node ref="C2" pin="2" pintype="passive"/>
       <node ref="D1" pin="1" pinfunction="K_1" pintype="passive"/>
@@ -1256,7 +1268,7 @@
       <node ref="U3" pin="7" pinfunction="GND_7" pintype="power_in"/>
     </net>
     <net code="18" name="Net-(BT1-+)" class="Default">
-      <node ref="BT1" pin="1" pinfunction="+_1" pintype="passive"/>
+      <node ref="BT1" pin="2" pinfunction="+_2" pintype="power_in"/>
       <node ref="L1" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
     <net code="19" name="Net-(D1-A)" class="Default">
@@ -1307,7 +1319,7 @@
       <node ref="U3" pin="14" pinfunction="INT2/CCP1_2/RxD_2/ADC14/P3.6_14" pintype="bidirectional+no_connect"/>
     </net>
     <net code="29" name="unconnected-(U3-INT3//TxD_2/P3.7-Pad15)" class="Default">
-      <node ref="U3" pin="15" pinfunction="INT3//TxD_2/P3.7_15" pintype="bidirectional"/>
+      <node ref="U3" pin="15" pinfunction="INT3//TxD_2/P3.7_15" pintype="bidirectional+no_connect"/>
     </net>
     <net code="30" name="unconnected-(U3-P1.1/ADC1/TxD2/PWM1N-Pad20)" class="Default">
       <node ref="U3" pin="20" pinfunction="P1.1/ADC1/TxD2/PWM1N_20" pintype="bidirectional+no_connect"/>

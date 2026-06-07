@@ -1,5 +1,6 @@
 (sym_lib_table
-  (version 7)
-  (lib (name "AVR16")(type "KiCad")(uri "${KIPRJMOD}/schematic-libs/avr16.kicad_sym")(options "")(descr ""))
-  (lib (name "stc8h")(type "KiCad")(uri "${KIPRJMOD}/schematic-libs/stc8h.kicad_sym")(options "")(descr ""))
+	(version 7)
+	(lib (name "AVR16") (type "KiCad") (uri "${KIPRJMOD}/schematic-libs/avr16.kicad_sym") (options "") (descr ""))
+	(lib (name "stc8h") (type "KiCad") (uri "${KIPRJMOD}/schematic-libs/stc8h.kicad_sym") (options "") (descr ""))
+	(lib (name "EasyEDA") (type "KiCad") (uri "${KIPRJMOD}/EasyEDA.kicad_sym") (options "") (descr ""))
 )
