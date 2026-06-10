@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/home/mnolan/programming/avr/nametag/pcb/nametag.kicad_sch</source>
-    <date>2026-06-07T14:25:12</date>
+    <date>2026-06-09T21:24:37</date>
     <tool>Eeschema 10.0.3</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -79,51 +79,42 @@
   </design>
   <components>
     <comp ref="BT1">
-      <value>BH-AAA-A1AJ001</value>
-      <footprint>EasyEDA:BAT-TH_BH-AAA-A1AJ001</footprint>
-      <datasheet>https://www.lcsc.com/datasheet/C5290189.pdf</datasheet>
+      <value>Battery_Cell</value>
+      <footprint>Battery:BatteryHolder_Keystone_2466_1xAAA</footprint>
       <description>Single-cell battery</description>
       <fields>
         <field name="Sim.Device">V</field>
         <field name="Sim.Type">DC</field>
         <field name="Sim.Pins">1=+ 2=-</field>
-        <field name="LCSC">C5290189</field>
-        <field name="Manufacturer">MYOUNG(美阳)</field>
-        <field name="MPN">BH-AAA-A1AJ001</field>
-        <field name="LCSC Part">C5290189</field>
-        <field name="Footprint">EasyEDA:BAT-TH_BH-AAA-A1AJ001</field>
-        <field name="Datasheet">https://www.lcsc.com/datasheet/C5290189.pdf</field>
+        <field name="Footprint">Battery:BatteryHolder_Keystone_2466_1xAAA</field>
+        <field name="Datasheet"/>
         <field name="Description">Single-cell battery</field>
       </fields>
-      <libsource lib="EasyEDA" part="BH-AAA-A1AJ001" description=""/>
+      <libsource lib="Device" part="Battery_Cell" description="Single-cell battery"/>
       <property name="Sim.Device" value="V"/>
       <property name="Sim.Type" value="DC"/>
       <property name="Sim.Pins" value="1=+ 2=-"/>
-      <property name="LCSC" value="C5290189"/>
-      <property name="Manufacturer" value="MYOUNG(美阳)"/>
-      <property name="MPN" value="BH-AAA-A1AJ001"/>
-      <property name="LCSC Part" value="C5290189"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
-      <property name="ki_keywords" value="Battery Connectors"/>
+      <property name="ki_keywords" value="battery cell"/>
       <sheetpath names="/Power/" tstamps="/a48f65a2-3369-4655-9ad9-13ca4e244bfb/"/>
-      <tstamps>eddeab0c-eb86-4359-81e3-c308b28f8679</tstamps>
+      <tstamps>59879662-b6a3-47be-a35c-467282a0d603</tstamps>
       <units>
         <unit name="A">
           <pins>
-            <pin num="2"/>
             <pin num="1"/>
+            <pin num="2"/>
           </pins>
         </unit>
       </units>
     </comp>
     <comp ref="C1">
       <value>GMC10X5R226M10NT</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <description>Unpolarized capacitor 22u</description>
       <fields>
         <field name="LCSC">C59461</field>
-        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description">Unpolarized capacitor 22u</field>
       </fields>
@@ -167,6 +158,54 @@
           <pins>
             <pin num="1"/>
             <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP1">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <description>test point</description>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description">test point</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="Power"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/Power/" tstamps="/a48f65a2-3369-4655-9ad9-13ca4e244bfb/"/>
+      <tstamps>12942a9a-c753-495d-85ac-21582eb80635</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP2">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <description>test point</description>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description">test point</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="Power"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/Power/" tstamps="/a48f65a2-3369-4655-9ad9-13ca4e244bfb/"/>
+      <tstamps>9b3dd510-d06a-4964-aaad-983a83938241</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
           </pins>
         </unit>
       </units>
@@ -249,6 +288,54 @@
         </unit>
       </units>
     </comp>
+    <comp ref="TP3">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <description>test point</description>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description">test point</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="Mcu"/>
+      <property name="Sheetfile" value="mcu.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/Mcu/" tstamps="/858a59c4-d6e3-4a1e-955d-510d1161f2bb/"/>
+      <tstamps>0f267fae-4cd5-4d84-aa9f-dec273d18bc7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP4">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <description>test point</description>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description">test point</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value="Mcu"/>
+      <property name="Sheetfile" value="mcu.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/Mcu/" tstamps="/858a59c4-d6e3-4a1e-955d-510d1161f2bb/"/>
+      <tstamps>e6d0a146-a390-4e06-93c6-7478896958ce</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="U3">
       <value>STC8H1K08-QFN20</value>
       <footprint>EasyEDA:QFN-20_L3.0-W3.0-P0.40-BL-EP1.7</footprint>
@@ -294,13 +381,13 @@
     </comp>
     <comp ref="D1">
       <value>LTST-C190KFKT</value>
-      <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <datasheet>Orange LED for lightsticks</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C157740 </field>
         <field name="Sim.Pins">1=K 2=A</field>
-        <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
+        <field name="Footprint">LED_SMD:LED_0603_1608Metric</field>
         <field name="Datasheet">Orange LED for lightsticks</field>
         <field name="Description">Light emitting diode</field>
       </fields>
@@ -324,13 +411,13 @@
     </comp>
     <comp ref="D2">
       <value>LTST-C190KFKT</value>
-      <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <datasheet>Orange LED for lightsticks</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C157740 </field>
         <field name="Sim.Pins">1=K 2=A</field>
-        <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
+        <field name="Footprint">LED_SMD:LED_0603_1608Metric</field>
         <field name="Datasheet">Orange LED for lightsticks</field>
         <field name="Description">Light emitting diode</field>
       </fields>
@@ -354,13 +441,13 @@
     </comp>
     <comp ref="D3">
       <value>LTST-C190KFKT</value>
-      <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <datasheet>Orange LED for lightsticks</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C157740 </field>
         <field name="Sim.Pins">1=K 2=A</field>
-        <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
+        <field name="Footprint">LED_SMD:LED_0603_1608Metric</field>
         <field name="Datasheet">Orange LED for lightsticks</field>
         <field name="Description">Light emitting diode</field>
       </fields>
@@ -384,13 +471,13 @@
     </comp>
     <comp ref="D4">
       <value>LTST-C190KFKT</value>
-      <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <datasheet>Orange LED for lightsticks</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C157740 </field>
         <field name="Sim.Pins">1=K 2=A</field>
-        <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
+        <field name="Footprint">LED_SMD:LED_0603_1608Metric</field>
         <field name="Datasheet">Orange LED for lightsticks</field>
         <field name="Description">Light emitting diode</field>
       </fields>
@@ -414,13 +501,13 @@
     </comp>
     <comp ref="D5">
       <value>LTST-C190KFKT</value>
-      <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <datasheet>Orange LED for lightsticks</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C157740 </field>
         <field name="Sim.Pins">1=K 2=A</field>
-        <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
+        <field name="Footprint">LED_SMD:LED_0603_1608Metric</field>
         <field name="Datasheet">Orange LED for lightsticks</field>
         <field name="Description">Light emitting diode</field>
       </fields>
@@ -444,13 +531,13 @@
     </comp>
     <comp ref="D6">
       <value>LTST-C190KFKT</value>
-      <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <datasheet>Orange LED for lightsticks</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C157740 </field>
         <field name="Sim.Pins">1=K 2=A</field>
-        <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
+        <field name="Footprint">LED_SMD:LED_0603_1608Metric</field>
         <field name="Datasheet">Orange LED for lightsticks</field>
         <field name="Description">Light emitting diode</field>
       </fields>
@@ -474,13 +561,13 @@
     </comp>
     <comp ref="D7">
       <value>LTST-C190KFKT</value>
-      <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <datasheet>Orange LED for lightsticks</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C157740 </field>
         <field name="Sim.Pins">1=K 2=A</field>
-        <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
+        <field name="Footprint">LED_SMD:LED_0603_1608Metric</field>
         <field name="Datasheet">Orange LED for lightsticks</field>
         <field name="Description">Light emitting diode</field>
       </fields>
@@ -504,13 +591,13 @@
     </comp>
     <comp ref="D8">
       <value>LTST-C190KFKT</value>
-      <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <datasheet>Orange LED for lightsticks</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C157740 </field>
         <field name="Sim.Pins">1=K 2=A</field>
-        <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
+        <field name="Footprint">LED_SMD:LED_0603_1608Metric</field>
         <field name="Datasheet">Orange LED for lightsticks</field>
         <field name="Description">Light emitting diode</field>
       </fields>
@@ -534,13 +621,13 @@
     </comp>
     <comp ref="D9">
       <value>SMLD12E3N1WT86</value>
-      <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <datasheet>Teal Green (505nm) or emerald green (520nm) for face</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C779453</field>
         <field name="Sim.Pins">1=K 2=A</field>
-        <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
+        <field name="Footprint">LED_SMD:LED_0603_1608Metric</field>
         <field name="Datasheet">Teal Green (505nm) or emerald green (520nm) for face</field>
         <field name="Description">Light emitting diode</field>
       </fields>
@@ -564,13 +651,13 @@
     </comp>
     <comp ref="D10">
       <value>SMLD12E3N1WT86</value>
-      <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <datasheet>Teal Green (505nm) or emerald green (520nm) for face</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C779453</field>
         <field name="Sim.Pins">1=K 2=A</field>
-        <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
+        <field name="Footprint">LED_SMD:LED_0603_1608Metric</field>
         <field name="Datasheet">Teal Green (505nm) or emerald green (520nm) for face</field>
         <field name="Description">Light emitting diode</field>
       </fields>
@@ -594,13 +681,13 @@
     </comp>
     <comp ref="D11">
       <value>SMLD12E3N1WT86</value>
-      <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <datasheet>Teal Green (505nm) or emerald green (520nm) for face</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C779453</field>
         <field name="Sim.Pins">1=K 2=A</field>
-        <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
+        <field name="Footprint">LED_SMD:LED_0603_1608Metric</field>
         <field name="Datasheet">Teal Green (505nm) or emerald green (520nm) for face</field>
         <field name="Description">Light emitting diode</field>
       </fields>
@@ -624,13 +711,13 @@
     </comp>
     <comp ref="D12">
       <value>SMLD12E3N1WT86</value>
-      <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <datasheet>Teal Green (505nm) or emerald green (520nm) for face</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C779453</field>
         <field name="Sim.Pins">1=K 2=A</field>
-        <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
+        <field name="Footprint">LED_SMD:LED_0603_1608Metric</field>
         <field name="Datasheet">Teal Green (505nm) or emerald green (520nm) for face</field>
         <field name="Description">Light emitting diode</field>
       </fields>
@@ -654,13 +741,13 @@
     </comp>
     <comp ref="D13">
       <value>SMLD12E3N1WT86</value>
-      <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <datasheet>Teal Green (505nm) or emerald green (520nm) for face</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C779453</field>
         <field name="Sim.Pins">1=K 2=A</field>
-        <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
+        <field name="Footprint">LED_SMD:LED_0603_1608Metric</field>
         <field name="Datasheet">Teal Green (505nm) or emerald green (520nm) for face</field>
         <field name="Description">Light emitting diode</field>
       </fields>
@@ -684,13 +771,13 @@
     </comp>
     <comp ref="D14">
       <value>SMLD12E3N1WT86</value>
-      <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <datasheet>Teal Green (505nm) or emerald green (520nm) for face</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C779453</field>
         <field name="Sim.Pins">1=K 2=A</field>
-        <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
+        <field name="Footprint">LED_SMD:LED_0603_1608Metric</field>
         <field name="Datasheet">Teal Green (505nm) or emerald green (520nm) for face</field>
         <field name="Description">Light emitting diode</field>
       </fields>
@@ -714,13 +801,13 @@
     </comp>
     <comp ref="D15">
       <value>SMLD12E2N1WT86</value>
-      <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <datasheet>Cyan (496nm) for eyes</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C2846641</field>
         <field name="Sim.Pins">1=K 2=A</field>
-        <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
+        <field name="Footprint">LED_SMD:LED_0603_1608Metric</field>
         <field name="Datasheet">Cyan (496nm) for eyes</field>
         <field name="Description">Light emitting diode</field>
       </fields>
@@ -744,13 +831,13 @@
     </comp>
     <comp ref="D16">
       <value>SMLD12E2N1WT86</value>
-      <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <datasheet>Cyan (496nm) for eyes</datasheet>
       <description>Light emitting diode</description>
       <fields>
         <field name="LCSC">C2846641</field>
         <field name="Sim.Pins">1=K 2=A</field>
-        <field name="Footprint">LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</field>
+        <field name="Footprint">LED_SMD:LED_0603_1608Metric</field>
         <field name="Datasheet">Cyan (496nm) for eyes</field>
         <field name="Description">Light emitting diode</field>
       </fields>
@@ -774,11 +861,11 @@
     </comp>
     <comp ref="R1">
       <value>47</value>
-      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <description>Resistor</description>
       <fields>
         <field name="LCSC">C23182</field>
-        <field name="Footprint">Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description">Resistor</field>
       </fields>
@@ -801,11 +888,11 @@
     </comp>
     <comp ref="R2">
       <value>47</value>
-      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <description>Resistor</description>
       <fields>
         <field name="LCSC">C23182</field>
-        <field name="Footprint">Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description">Resistor</field>
       </fields>
@@ -828,11 +915,11 @@
     </comp>
     <comp ref="R3">
       <value>300</value>
-      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <description>Resistor</description>
       <fields>
         <field name="LCSC">C23025</field>
-        <field name="Footprint">Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description">Resistor</field>
       </fields>
@@ -855,11 +942,11 @@
     </comp>
     <comp ref="R4">
       <value>300</value>
-      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <description>Resistor</description>
       <fields>
         <field name="LCSC">C23025</field>
-        <field name="Footprint">Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description">Resistor</field>
       </fields>
@@ -882,11 +969,11 @@
     </comp>
     <comp ref="R5">
       <value>300</value>
-      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <description>Resistor</description>
       <fields>
         <field name="LCSC">C23025</field>
-        <field name="Footprint">Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description">Resistor</field>
       </fields>
@@ -909,11 +996,11 @@
     </comp>
     <comp ref="R6">
       <value>300</value>
-      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <description>Resistor</description>
       <fields>
         <field name="LCSC">C23025</field>
-        <field name="Footprint">Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description">Resistor</field>
       </fields>
@@ -936,11 +1023,11 @@
     </comp>
     <comp ref="R7">
       <value>300</value>
-      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <description>Resistor</description>
       <fields>
         <field name="LCSC">C23025</field>
-        <field name="Footprint">Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description">Resistor</field>
       </fields>
@@ -963,11 +1050,11 @@
     </comp>
     <comp ref="R8">
       <value>300</value>
-      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <description>Resistor</description>
       <fields>
         <field name="LCSC">C23025</field>
-        <field name="Footprint">Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description">Resistor</field>
       </fields>
@@ -990,6 +1077,23 @@
     </comp>
   </components>
   <libparts>
+    <libpart lib="Connector" part="TestPoint">
+      <description>test point</description>
+      <footprints>
+        <fp>Pin*</fp>
+        <fp>Test*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">test point</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Connector_Generic" part="Conn_01x04">
       <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
       <footprints>
@@ -1007,6 +1111,23 @@
         <pin num="2" name="Pin_2" type="passive"/>
         <pin num="3" name="Pin_3" type="passive"/>
         <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Battery_Cell">
+      <description>Single-cell battery</description>
+      <fields>
+        <field name="Reference">BT</field>
+        <field name="Value">Battery_Cell</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Single-cell battery</field>
+        <field name="Sim.Device">V</field>
+        <field name="Sim.Type">DC</field>
+        <field name="Sim.Pins">1=+ 2=-</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="Device" part="C">
@@ -1082,23 +1203,6 @@
         <pin num="2" name="" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="EasyEDA" part="BH-AAA-A1AJ001">
-      <docs>https://www.lcsc.com/datasheet/C5290189.pdf</docs>
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">BH-AAA-A1AJ001</field>
-        <field name="Footprint">EasyEDA:BAT-TH_BH-AAA-A1AJ001</field>
-        <field name="Datasheet">https://www.lcsc.com/datasheet/C5290189.pdf</field>
-        <field name="Description"/>
-        <field name="Manufacturer">MYOUNG(美阳)</field>
-        <field name="MPN">BH-AAA-A1AJ001</field>
-        <field name="LCSC Part">C5290189</field>
-      </fields>
-      <pins>
-        <pin num="1" name="-" type="power_in"/>
-        <pin num="2" name="+" type="power_in"/>
-      </pins>
-    </libpart>
     <libpart lib="Switch" part="SW_SPST">
       <description>Single Pole Single Throw (SPST) switch</description>
       <fields>
@@ -1167,14 +1271,14 @@
     </libpart>
   </libparts>
   <libraries>
+    <library logical="Connector">
+      <uri>${KICAD10_SYMBOL_DIR}/Connector.kicad_sym</uri>
+    </library>
     <library logical="Connector_Generic">
       <uri>${KICAD10_SYMBOL_DIR}/Connector_Generic.kicad_sym</uri>
     </library>
     <library logical="Device">
       <uri>${KICAD10_SYMBOL_DIR}/Device.kicad_sym</uri>
-    </library>
-    <library logical="EasyEDA">
-      <uri>${KIPRJMOD}/EasyEDA.kicad_sym</uri>
     </library>
     <library logical="Switch">
       <uri>${KICAD10_SYMBOL_DIR}/Switch.kicad_sym</uri>
@@ -1195,9 +1299,11 @@
       <node ref="U3" pin="6" pinfunction="ADC_VRef+_6" pintype="input"/>
     </net>
     <net code="2" name="/Mcu/UART_RX" class="Default">
+      <node ref="TP4" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U3" pin="8" pinfunction="INT4/RxD/ADC8/P3.0_8" pintype="bidirectional"/>
     </net>
     <net code="3" name="/Mcu/UART_TX" class="Default">
+      <node ref="TP3" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U3" pin="9" pinfunction="TxD/ADC9/P3.1_9" pintype="bidirectional"/>
     </net>
     <net code="4" name="/Mcu/cathode0" class="Default">
@@ -1247,7 +1353,7 @@
       <node ref="U3" pin="10" pinfunction="PWMETI/PWMETI2/INT0/SCLK_4/I2CSCL_4/ADC10/P3.2_10" pintype="bidirectional"/>
     </net>
     <net code="17" name="GND" class="Default">
-      <node ref="BT1" pin="1" pinfunction="-_1" pintype="power_in"/>
+      <node ref="BT1" pin="2" pinfunction="-_2" pintype="passive"/>
       <node ref="C1" pin="2" pintype="passive"/>
       <node ref="C2" pin="2" pintype="passive"/>
       <node ref="D1" pin="1" pinfunction="K_1" pintype="passive"/>
@@ -1263,13 +1369,15 @@
       <node ref="D8" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D9" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="SW1" pin="2" pinfunction="B_2" pintype="passive"/>
+      <node ref="TP2" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U2" pin="1" pinfunction="GND_1" pintype="power_in"/>
       <node ref="U3" pin="21" pinfunction="EP_21" pintype="power_in"/>
       <node ref="U3" pin="7" pinfunction="GND_7" pintype="power_in"/>
     </net>
     <net code="18" name="Net-(BT1-+)" class="Default">
-      <node ref="BT1" pin="2" pinfunction="+_2" pintype="power_in"/>
+      <node ref="BT1" pin="1" pinfunction="+_1" pintype="passive"/>
       <node ref="L1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="TP1" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
     <net code="19" name="Net-(D1-A)" class="Default">
       <node ref="D1" pin="2" pinfunction="A_2" pintype="passive"/>

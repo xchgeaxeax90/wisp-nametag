@@ -78,19 +78,19 @@
       ],
       "drc_exclusions": [
         [
-          "courtyards_overlap|51348938|82313951|27279dc8-03f1-4db7-9fde-f54bf9a62200|9dbcdcb3-4ac1-4812-a4a8-3606e418728f",
+          "courtyards_overlap|51748938|82513951|27279dc8-03f1-4db7-9fde-f54bf9a62200|5b03b52d-31a2-489a-a3cc-05f246c7b5b9",
           ""
         ],
         [
-          "courtyards_overlap|96848938|82613951|32bf71ef-fc24-4ea2-b175-b8968641b2f6|9dbcdcb3-4ac1-4812-a4a8-3606e418728f",
-          ""
-        ],
-        [
-          "extra_footprint|117000000|41000000|357c3b10-38ee-4805-a9a9-b45d8b8322da|00000000-0000-0000-0000-000000000000",
+          "courtyards_overlap|96448938|82613951|32bf71ef-fc24-4ea2-b175-b8968641b2f6|5b03b52d-31a2-489a-a3cc-05f246c7b5b9",
           ""
         ],
         [
           "extra_footprint|117200000|92000000|0254226e-2663-4056-88fe-fab3d7fc90b1|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "extra_footprint|31000000|44000000|357c3b10-38ee-4805-a9a9-b45d8b8322da|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
@@ -731,7 +731,7 @@
         "uuid": "a7c50b29-e914-4aee-9ec8-81f37f7bd068"
       }
     ],
-    "used_designators": "#PWR10-11,TP1-4,R1-8,U2",
+    "used_designators": "BT2",
     "variants": []
   },
   "sheets": [

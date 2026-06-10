@@ -2109,7 +2109,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "1967b619-3cee-4a47-a02b-20047c6e674f")
 		(property "Reference" "U3"
 			(at 143.1133 53.7901 0)
@@ -2134,7 +2133,7 @@
 			)
 		)
 		(property "Footprint" "EasyEDA:QFN-20_L3.0-W3.0-P0.40-BL-EP1.7"
-			(at 140.97 38.1 0)
+			(at 141.224 60.96 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
