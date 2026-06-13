@@ -5,6 +5,12 @@ Q              := @
 NULL           := 2>/dev/null
 endif
 
+DEBUG              ?= 0
+ifeq ($(DEBUG),1)
+CC_CFLAGS += -DDEBUG=1
+endif
+
+
 CC             = $(TOOCHAIN_PREFIX)sdcc
 AR             = $(TOOCHAIN_PREFIX)sdar
 PACKIHX        = $(TOOCHAIN_PREFIX)packihx

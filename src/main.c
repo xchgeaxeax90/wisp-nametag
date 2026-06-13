@@ -4,6 +4,7 @@
 #include "timer.h"
 #include "animation.h"
 #include "state_machine.h"
+#include "debug.h"
 
 /* TODO determine if we actually need the button state bit */
 volatile __idata uint16_t button_timeout = 0;
@@ -96,6 +97,7 @@ int main(void){
     setup_pwm();
 
     setup_timer2_interrupt();
+    DEBUG_INIT(9600);
 
     while(1) {
         /* Atomically read button state and timeout into local variables */
@@ -111,9 +113,11 @@ int main(void){
             long_button_press();
         }
         if(state == 1 && timeout == 700){
+            DEBUG_PRINTLN("select_off_animation()");
             select_off_animation();
         }
         if(state == 0 && timeout >= 700){
+            DEBUG_PRINTLN("deep_sleep()");
             deep_sleep();
         }
         if(state == 0 && timeout != 0){

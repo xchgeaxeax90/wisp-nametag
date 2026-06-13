@@ -26,6 +26,7 @@ const __CODE uint8_t animation_sizes[] = {
     sizeof(animation_wave)/sizeof(animation_wave[0]),
     sizeof(animation_blink)/sizeof(animation_blink[0]),
     sizeof(animation_on)/sizeof(animation_on[0]),
+    sizeof(animation_off)/sizeof(animation_off[0]),
 };
 
 const uint8_t max_animation_select = 4;
