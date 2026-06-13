@@ -25,7 +25,11 @@ static void init_timera(void){
     TCA0.SPLIT.HPER = 0xff;
     TCA0.SPLIT.LPER = 0xff;
     TCA0.SPLIT.LCMP0 = 0;
+    TCA0.SPLIT.LCMP1 = 0;
+    TCA0.SPLIT.LCMP2 = 0;
     TCA0.SPLIT.HCMP0 = 0;
+    TCA0.SPLIT.HCMP1 = 0;
+    TCA0.SPLIT.HCMP2 = 0;
     // With a 1MHz clock, the PWM will have a period of 3KHz, which seems like plenty
     TCA0.SPLIT.CTRLA = TCA_SPLIT_CLKSEL_DIV1_gc | TCA_SPLIT_ENABLE_bm;
 }

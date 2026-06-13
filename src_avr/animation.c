@@ -32,6 +32,7 @@ const __flash uint8_t animation_sizes[] = {
     sizeof(animation_wave)/sizeof(animation_wave[0]),
     sizeof(animation_blink)/sizeof(animation_blink[0]),
     sizeof(animation_on)/sizeof(animation_on[0]),
+    sizeof(animation_off)/sizeof(animation_off[0]),
 };
 
 const __flash animation_data_t *animation_ptr = &animation_circle[0];

@@ -32,6 +32,9 @@
 #define BTN_PORT PORTC
 #define BTN_bm PIN1_bm
 
+#define PORTC_EXTRA (PIN2_bm | PIN3_bm)
+#define PORTD_EXTRA (PIN6_bm | PIN7_bm)
+
 void init_pins(void);
 void enable_button_interrupt(void);
 void disable_button_interrupt(void);

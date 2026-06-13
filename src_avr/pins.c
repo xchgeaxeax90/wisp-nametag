@@ -15,25 +15,21 @@ void init_pins(void){
     PWM0to5_PORT.DIRSET = PWM0_bm | PWM1_bm | PWM2_bm | PWM3_bm | PWM4_bm | PWM5_bm;
     CATHODE_PORT.DIRSET = CAT0_bm | CAT1_bm;
 
-    PWM67_PORT.DIRSET = PWM6_bm | PWM7_bm;
+    PORTD.DIRSET = PWM6_bm | PWM7_bm | PORTD_EXTRA;
     BTN_PORT.DIRCLR = BTN_bm;
+    PORTC.DIRSET = PORTC_EXTRA;
     BTN_PORT.PINCONFIG = PORT_PULLUPEN_bm | PORT_INVEN_bm;
     BTN_PORT.PINCTRLUPD = BTN_bm;
 
-    // Select the cathode controlling the top by driving CAT1 LOW. 
-    CATHODE_PORT.OUTSET = CAT0_bm;
-    CATHODE_PORT.OUTCLR = CAT1_bm;
+    PORTA.OUT = 0;
+    PORTC.OUT = 0;
+    PORTD.OUT = 0;
 }
 
 void disable_pins(void){
-    PORTA.DIR = 0;
-    PORTC.DIR = 0;
-    PORTD.DIR = 0;
-    PORTA.PINCONFIG = PORT_ISC_INPUT_DISABLE_gc;
-    PORTD.PINCONFIG = PORT_ISC_INPUT_DISABLE_gc;
-    PORTA.PINCTRLSET = 0xff;
-    PORTD.PINCTRLSET = 0xff;
-
+    PORTA.OUT = 0;
+    PORTC.OUT = 0;
+    PORTD.OUT = 0;
 }
 
 void enable_button_interrupt(void){

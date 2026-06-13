@@ -27,7 +27,7 @@ def animation_circle():
     write_animation('animation_circle', lights, period_sec)
 
 def animation_breathe():
-    period = 8
+    period = 20
     period_sec = 1.0
     lights = np.zeros((period, len(face_light_phases) + 4))
 
