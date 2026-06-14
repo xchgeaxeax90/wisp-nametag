@@ -77,10 +77,10 @@ void init_pwm(void){
 
 void stop_pwm(void){
     TCA0.SPLIT.CTRLB = 0;
-    TCA0.SPLIT.CTRLA &= TCA_SPLIT_ENABLE_bm;
+    TCA0.SPLIT.CTRLA &= ~(TCA_SPLIT_ENABLE_bm);
     timerd_enable_sync();
     TCD0.CTRLA &= ~(TCD_ENABLE_bm);
-    _PROTECTED_WRITE(TCD0.FAULTCTRL, TCD_CMPCEN_bm | TCD_CMPDEN_bm);
+    _PROTECTED_WRITE(TCD0.FAULTCTRL, 0);
 }
 
 void write_pwm(const __flash pwm_settings_t *pwm_settings){
