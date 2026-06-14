@@ -29,6 +29,7 @@ void poll_button(void){
 
 static volatile __BIT eye_en = 0;
 INTERRUPT_USING(Timer2_Routine, EXTI_VectTimer2, 1) {
+    uint8_t p_sw2_save = P_SW2;
     poll_button();
     /* Disable cathodes */
     if(update_animation()){
@@ -44,10 +45,11 @@ INTERRUPT_USING(Timer2_Routine, EXTI_VectTimer2, 1) {
 
     /* Enable the PWM update interrupt so the cathode setting can be updated synchronously to the PWM capture compare unit */
     SFRX_SET(PWMA_IER, 0);
+    P_SW2 = p_sw2_save;
 }
 
 INTERRUPT_USING(PWMA_Routine, EXTI_VectPWMA, 2) {
-
+    uint8_t p_sw2_save = P_SW2;
     if(eye_en){
         /* Cathode 0 is connected to the eyes, it should be low */
         CATHODE0_PIN_BIT = RESET;
@@ -59,6 +61,7 @@ INTERRUPT_USING(PWMA_Routine, EXTI_VectPWMA, 2) {
     }
     eye_en = !eye_en;
     SFRX_RESET(PWMA_IER, 0);
+    P_SW2 = p_sw2_save;
 }
 
 void deep_sleep(void){

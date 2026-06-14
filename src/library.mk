@@ -45,7 +45,7 @@ USER_INCFLAGS  := $(addprefix -I$(TOP)/, $(USER_INCLUDES))
 ARCH_FLAGS    := -mmcs51 --model-small
 DEBUG_FLAGS   ?= 
 # c flags
-OPT           ?= --opt-code-size --fverbose-asm --peep-file peephole.def
+OPT           ?= --opt-code-size --fverbose-asm
 CSTD          ?= --std-sdcc99
 CC_CFLAGS    += $(ARCH_FLAGS) $(DEBUG_FLAGS) $(OPT) $(CSTD) $(addprefix -D, $(LIB_FLAGS))
 LD_CFLAGS    += $(ARCH_FLAGS) $(DEBUG_FLAGS) $(OPT) \

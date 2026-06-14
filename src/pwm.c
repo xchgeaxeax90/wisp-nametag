@@ -32,10 +32,10 @@ void setup_pwm(void){
 
     /* Enable the compare outputs for all pwm ports on PWMA/B
      Equivalent to SetPortState(ON), SetPortPolar(High)*/
-    PWMA_CCER1 = 0x55;
-    PWMA_CCER2 = 0x55;
-    PWMB_CCER1 = 0x55;
-    PWMB_CCER2 = 0x55;
+    PWMA_CCER1 = 0x11;
+    PWMA_CCER2 = 0x11;
+    PWMB_CCER1 = 0x11;
+    PWMB_CCER2 = 0x11;
 
     /* Set prescaler to 0 */
     PWMA_PSCRH = 0;
@@ -48,6 +48,25 @@ void setup_pwm(void){
     PWMB_ARRH = 0x0;
     PWMA_ARRL = 0xff;
     PWMB_ARRL = 0xff;
+
+    /* Set Capture Compare registers to 0 */
+    PWMA_CCR1H = 0;
+    PWMA_CCR1L = 0;
+    PWMA_CCR2H = 0;
+    PWMA_CCR2L = 0;
+    PWMA_CCR3H = 0;
+    PWMA_CCR3L = 0;
+    PWMA_CCR4H = 0;
+    PWMA_CCR4L = 0;
+
+    PWMB_CCR5H = 0;
+    PWMB_CCR5L = 0;
+    PWMB_CCR6H = 0;
+    PWMB_CCR6L = 0;
+    PWMB_CCR7H = 0;
+    PWMB_CCR7L = 0;
+    PWMB_CCR8H = 0;
+    PWMB_CCR8L = 0;
 
     /* Set all PWMB ports to alternate pin selection 1 */
     PWMB_PS = 0x55;
