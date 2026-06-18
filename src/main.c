@@ -11,7 +11,7 @@ volatile __idata uint16_t button_timeout = 0;
 volatile __BIT button_state = 0;
 void poll_button(void){
     /* Button is active low */
-    if(!(P3 & BUTTON_PIN)){
+    if(!BUTTON_PIN_BIT){
         if(!button_state){
             button_timeout = 0;
         } else {
@@ -78,12 +78,12 @@ void deep_sleep(void){
     /* Disable the interrupt */
     EXTI_Int0_SetIntState(HAL_State_OFF);
     /* Software reset */
-    IAP_SoftReset();
+    //IAP_SoftReset();
     /* For some reason, this doesn't seem to work right, the system comes out of sleep with the animation stopped */
-    /* setup_gpio(); */
-    /* setup_pwm(); */
-    /* setup_timer2_interrupt(); */
-    /* select_animation(); */
+    setup_gpio();
+    setup_pwm();
+    setup_timer2_interrupt();
+    set_animation_state();
 }
 
 /* With no clock division, the multiplexing runs at 121Hz and PWM runs at 93 kHz */

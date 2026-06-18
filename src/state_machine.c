@@ -9,23 +9,34 @@ static __idata enum state_t state = STATE_ANIMATION_SEL;
 void short_button_press(void){
     switch(state){
     case STATE_ANIMATION_SEL:
-	select_animation();
-	break;
+        select_animation();
+        break;
     case STATE_BRIGHTNESS_SEL:
-	select_brightness();
-	break;
+        select_brightness();
+        break;
     }
 }
 
 void long_button_press(void){
     switch(state){
     case STATE_ANIMATION_SEL:
-	select_on_animation();
-	state = STATE_BRIGHTNESS_SEL;
-	break;
+        select_on_animation();
+        state = STATE_BRIGHTNESS_SEL;
+        break;
     case STATE_BRIGHTNESS_SEL:
-	select_animation();
-	state = STATE_ANIMATION_SEL;
-	break;
+        select_animation();
+        state = STATE_ANIMATION_SEL;
+        break;
+    }
+}
+
+void set_animation_state(void){
+    switch(state){
+    case STATE_ANIMATION_SEL:
+        select_animation();
+        break;
+    case STATE_BRIGHTNESS_SEL:
+        select_on_animation();
+        break;
     }
 }

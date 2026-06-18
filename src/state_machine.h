@@ -8,3 +8,6 @@ enum state_t {
 void short_button_press(void);
 
 void long_button_press(void);
+
+/* Sets animation state to whatever the state variable says it is */
+void set_animation_state(void);

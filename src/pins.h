@@ -17,6 +17,7 @@
 
 #define BUTTON_PORT GPIO_Port_3
 #define BUTTON_PIN GPIO_Pin_2
+#define BUTTON_PIN_BIT P32
 #define CATHODE0_PIN_BIT P13
 #define CATHODE1_PIN_BIT P15
 
