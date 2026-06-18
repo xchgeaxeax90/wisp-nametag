@@ -126,10 +126,10 @@ void write_pwm(void){
     uint8_t face_bot_r = scale_pwm(animation_ptr->pwm_settings.face_bot_r);
     uint8_t face_top_c = scale_pwm(animation_ptr->pwm_settings.face_top_c);
     SFRX_ON();
-    PWMA_CCR2L = light_l;
-    PWMA_CCR3L = face_top_c;
-    PWMB_CCR5L = face_bot_l;
-    PWMB_CCR6L = face_bot_c;
+    PWMB_CCR6L = light_l;
+    PWMB_CCR5L = face_top_c;
+    PWMA_CCR4L = face_bot_l;
+    PWMA_CCR3L = face_bot_c;
     PWMB_CCR7L = light_r;
     PWMB_CCR8L = face_bot_r;
     SFRX_OFF();
@@ -148,8 +148,8 @@ void write_pwm_multiplexed(__idata uint8_t eye_sel) {
     face_eye_l = scale_pwm(face_eye_l);
     face_eye_r = scale_pwm(face_eye_r);
     SFRX_ON();
-    PWMA_CCR1L = face_eye_l;
-    PWMA_CCR4L = face_eye_r;
+    PWMA_CCR2L = face_eye_l;
+    PWMA_CCR1L = face_eye_r;
     SFRX_OFF();
 }
 

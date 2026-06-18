@@ -13,18 +13,17 @@
 #define PWM_PINS_P3 ((GPIO_Pin_3 | GPIO_Pin_4))
 #define PWM_PINS_P5 ((GPIO_Pin_4))
 
-#define CATH_PINS_P1 ((GPIO_Pin_5))
-#define CATH_PINS_P3 ((GPIO_Pin_7))
-#define EXTRA_PINS_P1 ((GPIO_Pin_1 | GPIO_Pin_3))
-#define EXTRA_PINS_P3 ((GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_5 | GPIO_Pin_6))
+#define CATH_PINS_P1 ((GPIO_Pin_3 | GPIO_Pin_5))
+#define EXTRA_PINS_P1 ((GPIO_Pin_1))
+#define EXTRA_PINS_P3 ((GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7))
 
 
 void setup_gpio(void){
     GPIO_P1_SetMode(PWM_PINS_P1 | CATH_PINS_P1 | EXTRA_PINS_P1,
                     GPIO_Mode_Output_PP);
-    GPIO_P3_SetMode(PWM_PINS_P3 | CATH_PINS_P3 | EXTRA_PINS_P3,
+    GPIO_P3_SetMode(PWM_PINS_P3 | EXTRA_PINS_P3,
                     GPIO_Mode_Output_PP);
-    GPIO_P5_SetMode(GPIO_Pin_4,
+    GPIO_P5_SetMode(PWM_PINS_P5,
                     GPIO_Mode_Output_PP);
     GPIO_P3_SetMode(BUTTON_PIN, GPIO_Mode_Input_HIP);
     GPIO_SetPullUp(GPIO_Port_3, BUTTON_PIN, HAL_State_ON);
