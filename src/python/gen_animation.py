@@ -63,6 +63,10 @@ def animation_blink():
     lights = np.concat((lightsticks, eyes, face_lights), axis=1)
     write_animation('animation_blink', lights, period_sec)
 
+def animation_on():
+    lights = np.ones((1, 10))
+    write_animation('animation_on', lights, 0.1)
+
     
 
 if __name__ == '__main__':
@@ -70,3 +74,4 @@ if __name__ == '__main__':
     animation_breathe()
     animation_wave()
     animation_blink()
+    animation_on()

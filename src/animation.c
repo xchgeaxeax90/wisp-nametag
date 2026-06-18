@@ -3,10 +3,8 @@
 #include "python/animation_breathe.inc"
 #include "python/animation_wave.inc"
 #include "python/animation_blink.inc"
+#include "python/animation_on.inc"
 
-const __CODE animation_data_t animation_on[] = {
-    {{ 255, 255, 255, 255, 255, 255, 255, 255, 255, 255}, .timeout = 10}
-};
 const __CODE animation_data_t animation_off[] = {
     {{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, .timeout = 10}
 };
