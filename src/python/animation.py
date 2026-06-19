@@ -9,13 +9,13 @@ light_x_coords = np.array([83.38, 112.34, 93.27, 102.53, 86.70, 97.53, 108.87, 8
 light_x_coords -= min(light_x_coords)
 light_x_coords /= max(light_x_coords)
 light_names = ['light_l', 'light_r', 'eye_l', 'eye_r', 'face_bot_l', 'face_bot_c', 'face_bot_r', 'face_top_l', 'face_top_c', 'face_top_r']
-light_scale = [0.5 if 'face' in x else 1.0 for x in light_names]
 
 timer_freq = 244
 
-def write_animation(name, lights, period_sec):
+def write_animation(name, lights, period_sec, green_scale):
     timeout = period_sec / len(lights) * timer_freq
     lights = np.clip(lights, 0, 1) * 255
+    light_scale = [green_scale if 'face' in x else 1.0 for x in light_names]
 
     with open(f'{name}.inc', 'w') as f:
         f.write(f'const __CODE animation_data_t {name}[] = {{\n')

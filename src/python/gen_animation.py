@@ -1,10 +1,11 @@
 import numpy as np
 import math
+import argparse
 from animation import face_light_phases, timer_freq, write_animation, light_x_coords
 
 
 
-def animation_circle():
+def animation_circle(args):
     period = 16
     period_sec = 1.0
     face_lights = np.zeros((period, len(face_light_phases)))
@@ -24,18 +25,18 @@ def animation_circle():
 
 
     lights = np.concat((lightsticks, eyes, face_lights), axis=1)
-    write_animation('animation_circle', lights, period_sec)
+    write_animation('animation_circle', lights, period_sec, args.green_scale)
 
-def animation_breathe():
+def animation_breathe(args):
     period = 20
     period_sec = 1.0
     lights = np.zeros((period, len(face_light_phases) + 4))
 
     for i in range(period):
         lights[i] = np.sin(lights[i] + i/period * math.pi)
-    write_animation('animation_breathe', lights, period_sec)
+    write_animation('animation_breathe', lights, period_sec, args.green_scale)
 
-def animation_wave():
+def animation_wave(args):
     period = 24
     period_sec = 1.5
     lights = np.zeros((period, len(face_light_phases) + 4))
@@ -43,9 +44,9 @@ def animation_wave():
     light_phase = math.pi * light_x_coords
     for i in range(period):
         lights[i] = np.sin(light_phase + i/period * math.pi*2)
-    write_animation('animation_wave', lights, period_sec)
+    write_animation('animation_wave', lights, period_sec, args.green_scale)
 
-def animation_blink():
+def animation_blink(args):
     period = 30
     period_sec = 2.0
     
@@ -61,12 +62,12 @@ def animation_blink():
         lightsticks[i] = np.sin(lightstick_phase + phase)**9
 
     lights = np.concat((lightsticks, eyes, face_lights), axis=1)
-    write_animation('animation_blink', lights, period_sec)
+    write_animation('animation_blink', lights, period_sec, args.green_scale)
 
 
-def animation_twinkle():
-    period = 100
-    period_sec = 10
+def animation_twinkle(args):
+    period = 150
+    period_sec = 12
 
     np.random.seed(2)
     face_lights = np.zeros((period, 8))
@@ -76,7 +77,6 @@ def animation_twinkle():
     face_light_phases = np.random.rand(8) * 2 * math.pi
     face_light_frequencies = np.random.rand(8) * 8 + 1
     face_light_frequencies = np.round(face_light_frequencies * period_sec) / period_sec
-    print(face_light_frequencies)
 
     lightstick_phases = np.full(2, 0.5*math.pi)
     lightstick_frequency = np.full(2, 0.5*math.pi)
@@ -88,21 +88,24 @@ def animation_twinkle():
 
         face_lights[i] = np.sin(phase)**9
 
-        lightsticks[i] = 0.5 * np.sin(lightstick_phases + lightstick_frequency * t) ** 2
+        lightsticks[i] = np.sin(lightstick_phases + lightstick_frequency * t) ** 2
 
     lights = np.concat((lightsticks, face_lights), axis=1)
-    write_animation('animation_twinkle', lights, period_sec)
+    write_animation('animation_twinkle', lights, period_sec, args.green_scale)
 
-def animation_on():
+def animation_on(args):
     lights = np.ones((1, 10))
-    write_animation('animation_on', lights, 0.1)
+    write_animation('animation_on', lights, 0.1, args.green_scale)
 
     
 
 if __name__ == '__main__':
-    animation_circle()
-    animation_breathe()
-    animation_wave()
-    animation_blink()
-    animation_twinkle()
-    animation_on()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--green-scale', type=float, default=1.0, help='Factor to scale the green light brightness')
+    args = parser.parse_args()
+    animation_circle(args)
+    animation_breathe(args)
+    animation_wave(args)
+    animation_blink(args)
+    animation_twinkle(args)
+    animation_on(args)

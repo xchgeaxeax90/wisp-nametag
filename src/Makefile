@@ -24,6 +24,8 @@ USER_INCLUDES       := .
 
 PORT ?= /dev/ttyUSB0
 
+GREEN_SCALE?=1.0
+
 
 ## STC8H1K08 36.864MHz
 LIB_FLAGS           := __CONF_FOSC=1000000UL \
@@ -35,3 +37,12 @@ LIB_FLAGS           := __CONF_FOSC=1000000UL \
 					__CONF_LIRTRIM=0x00 
 
 include ./library.mk
+
+
+$(BDIR)/./animation.rel: $(wildcard $(TOP)/python/*.inc)
+
+$(wildcard $(TOP)/python/*.inc): python
+
+.PHONY: python
+python:
+	$(MAKE) -C python GREEN_SCALE=$(GREEN_SCALE)
