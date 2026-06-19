@@ -1,7 +1,10 @@
+ANIMATION_DIR=../animation
+GREEN_SCALE?=1.0
+
 CC := avr-gcc
 MCU := avr16dd20
 FREQUENCY:=1000000
-CFLAGS := -Os -mmcu=$(MCU) -c -DF_CPU=$(FREQUENCY) -MMD -MP -Wall -Wextra -pedantic
+CFLAGS := -Os -mmcu=$(MCU) -c -DF_CPU=$(FREQUENCY) -MMD -MP -Wall -Wextra -pedantic -I$(ANIMATION_DIR)
 LDFLAGS := -mmcu=$(MCU) -Os
 
 srcs = $(wildcard *.c)
@@ -29,5 +32,10 @@ clean:
 prog: main.hex
 	avrdude -c serialupdi -P /dev/ttyUSB0 -p avr16dd20 -B 115200 -U flash:w:main.hex:i
 
+animation.o: animation
+
+.PHONY: animation
+animation:
+	make -C $(ANIMATION_DIR) GREEN_SCALE=$(GREEN_SCALE) STYLE=avr
 
 -include $(deps)

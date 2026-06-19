@@ -1,10 +1,10 @@
 #include "animation.h"
-#include "python/animation_circle.inc"
-#include "python/animation_breathe.inc"
-#include "python/animation_wave.inc"
-#include "python/animation_blink.inc"
-#include "python/animation_twinkle.inc"
-#include "python/animation_on.inc"
+#include "animation_circle.inc"
+#include "animation_breathe.inc"
+#include "animation_wave.inc"
+#include "animation_blink.inc"
+#include "animation_twinkle.inc"
+#include "animation_on.inc"
 
 const __CODE animation_data_t animation_off[] = {
     {{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, .timeout = 10}

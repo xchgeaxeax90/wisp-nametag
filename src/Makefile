@@ -13,6 +13,7 @@ MCU_CODE_SIZE       ?= 8192
 PROJECT             ?= app
 # The path for generated files
 BUILD_DIR           = build
+ANIMATION_DIR = ../animation
 
 TOOCHAIN_PREFIX     ?=
 
@@ -20,7 +21,7 @@ TOOCHAIN_PREFIX     ?=
 USER_CDIRS          := .
 # C source single files
 USER_CFILES         :=
-USER_INCLUDES       := .
+USER_INCLUDES       := $(ANIMATION_DIR) .
 
 PORT ?= /dev/ttyUSB0
 
@@ -39,10 +40,8 @@ LIB_FLAGS           := __CONF_FOSC=1000000UL \
 include ./library.mk
 
 
-$(BDIR)/./animation.rel: $(wildcard $(TOP)/python/*.inc)
+$(BDIR)/./animation.rel: animation
 
-$(wildcard $(TOP)/python/*.inc): python
-
-.PHONY: python
-python:
-	$(MAKE) -C python GREEN_SCALE=$(GREEN_SCALE)
+.PHONY: animation
+animation:
+	$(MAKE) -C $(ANIMATION_DIR) GREEN_SCALE=$(GREEN_SCALE) STYLE=stc8

@@ -95,5 +95,5 @@ $(BDIR)/$(PROJECT).hex: $(USER_RELS) $(BDIR)/$(LIB_FWLIB)
 clean:
 	rm -rf $(BDIR)/*
 
-flash: $(BDIR)/$(PROJECT).hex
+flash:
 	stcgal -p $(PORT) -P stc8g --trim 24000 -a -A rts $(BDIR)/$(PROJECT).hex

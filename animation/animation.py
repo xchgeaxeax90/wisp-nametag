@@ -12,13 +12,16 @@ light_names = ['light_l', 'light_r', 'eye_l', 'eye_r', 'face_bot_l', 'face_bot_c
 
 timer_freq = 244
 
-def write_animation(name, lights, period_sec, green_scale):
+def write_animation(name, lights, period_sec, args):
     timeout = period_sec / len(lights) * timer_freq
     lights = np.clip(lights, 0, 1) * 255
-    light_scale = [green_scale if 'face' in x else 1.0 for x in light_names]
+    light_scale = [args.green_scale if 'face' in x else 1.0 for x in light_names]
 
     with open(f'{name}.inc', 'w') as f:
-        f.write(f'const __CODE animation_data_t {name}[] = {{\n')
+        if args.style == 'stc8':
+            f.write(f'const __CODE animation_data_t {name}[] = {{\n')
+        elif args.style == 'avr':
+            f.write(f'const __flash animation_data_t {name}[] = {{\n')
         for line in lights:
             output = []
             for i, light in enumerate(line):
