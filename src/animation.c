@@ -3,6 +3,7 @@
 #include "python/animation_breathe.inc"
 #include "python/animation_wave.inc"
 #include "python/animation_blink.inc"
+#include "python/animation_twinkle.inc"
 #include "python/animation_on.inc"
 
 const __CODE animation_data_t animation_off[] = {
@@ -11,6 +12,7 @@ const __CODE animation_data_t animation_off[] = {
 
 const __CODE animation_data_t* animation_array[] = {
     animation_circle,
+    animation_twinkle,
     animation_breathe,
     animation_wave,
     animation_blink,
@@ -20,6 +22,7 @@ const __CODE animation_data_t* animation_array[] = {
 
 const __CODE uint8_t animation_sizes[] = {
     sizeof(animation_circle)/sizeof(animation_circle[0]),
+    sizeof(animation_twinkle)/sizeof(animation_twinkle[0]),
     sizeof(animation_breathe)/sizeof(animation_breathe[0]),
     sizeof(animation_wave)/sizeof(animation_wave[0]),
     sizeof(animation_blink)/sizeof(animation_blink[0]),
@@ -27,7 +30,7 @@ const __CODE uint8_t animation_sizes[] = {
     sizeof(animation_off)/sizeof(animation_off[0]),
 };
 
-const uint8_t max_animation_select = 4;
+const uint8_t max_animation_select = 5;
 
 const __CODE animation_data_t *animation_ptr = &animation_circle[0];
 const uint8_t animation_size = sizeof(animation_circle)/sizeof(animation_circle[0]);

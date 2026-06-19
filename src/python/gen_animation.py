@@ -63,6 +63,36 @@ def animation_blink():
     lights = np.concat((lightsticks, eyes, face_lights), axis=1)
     write_animation('animation_blink', lights, period_sec)
 
+
+def animation_twinkle():
+    period = 100
+    period_sec = 10
+
+    np.random.seed(2)
+    face_lights = np.zeros((period, 8))
+    lightsticks = np.zeros((period, 2))
+
+    # Give each light on the face, including the eyes, a random frequency and phase
+    face_light_phases = np.random.rand(8) * 2 * math.pi
+    face_light_frequencies = np.random.rand(8) * 8 + 1
+    face_light_frequencies = np.round(face_light_frequencies * period_sec) / period_sec
+    print(face_light_frequencies)
+
+    lightstick_phases = np.full(2, 0.5*math.pi)
+    lightstick_frequency = np.full(2, 0.5*math.pi)
+
+
+    for i in range(period):
+        t = i/period * period_sec
+        phase = face_light_phases + face_light_frequencies * t
+
+        face_lights[i] = np.sin(phase)**9
+
+        lightsticks[i] = 0.5 * np.sin(lightstick_phases + lightstick_frequency * t) ** 2
+
+    lights = np.concat((lightsticks, face_lights), axis=1)
+    write_animation('animation_twinkle', lights, period_sec)
+
 def animation_on():
     lights = np.ones((1, 10))
     write_animation('animation_on', lights, 0.1)
@@ -74,4 +104,5 @@ if __name__ == '__main__':
     animation_breathe()
     animation_wave()
     animation_blink()
+    animation_twinkle()
     animation_on()

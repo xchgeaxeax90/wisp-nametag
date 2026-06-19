@@ -10,7 +10,6 @@ light_x_coords -= min(light_x_coords)
 light_x_coords /= max(light_x_coords)
 light_names = ['light_l', 'light_r', 'eye_l', 'eye_r', 'face_bot_l', 'face_bot_c', 'face_bot_r', 'face_top_l', 'face_top_c', 'face_top_r']
 light_scale = [0.5 if 'face' in x else 1.0 for x in light_names]
-print(light_scale)
 
 timer_freq = 244
 
