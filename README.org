@@ -1,217 +1,81 @@
 #+title: Wisp Light-up Nametag
 
-[[./img/nametag_gea.jpg]]
+[[./img/nametag_2.0.jpg]]
 
 This repository contains the PCB design and software for the light up
-nametag I gave out at AWA. Gerbers for the blank badge I gave out are
-available, and the Kicad project is available for you to modify the
-name silkscreened onto the PCB if you would like as well.
+nametag I will be giving out at Offkai Expo 2026. 
 
-But first:
-** Crushing Your Expectations
-This project involves PCB manufacturing, surface mount soldering, and
-flashing firmware onto a microcontroller. While I am able to offer
-guidance and suggestions on how to do these things, this is not a step
-by step tutorial on how to build your own badge. If you have never
-soldered before and have not worked with a bare metal microcontroller,
-this project may not be for you.
+* Usage
+** Battery
 
+*NOTE: Please be very careful to insert the battery with the correct polarity in the battery holder. Failure to do so may result in destruction of the device*
 
-** PCB
-PCBs were ordered from JLCPCB. If you would like to build the blank
-nametag, take ~pcb_outputs/nametag_blank.zip~ and upload it to
-[[https://jlcpcb.com/][JLCPCB's PCB quote page]]
+The Badge is powered by a 1.5V AAA battery. While I have not tested it, it should be compatible with rechargable AAA cells or lithium rechargable cells, provided the battery voltage is below 3 volts.
 
+While powered down, the badge draws a small amount of current from the battery at all times. When storing the badge for long periods of time (weeks-months), please remove the battery so as to avoid draining the battery or causing it to leak.
 
+*** User Interface
 
-I would recommend selecting "Black" for PCB color, "Remove Mark" for
-Mark on PCB, and leaving everything else default.
-The PCB quote should come out to between $2-$4. Pick a shipping option
-and order.
+- Tap the button on the bottom right to change the blink pattern
+- Press and hold the button on the bottom right for about 2 seconds, then release to enter brightness mode. The LEDs will stop blinking and remain on continuously
+- When in brightness mode, tap the button to change the brightness
+- To exit brightness mode, press and hold the button for about 2 seconds, then release. The LEDs should begin blinking again
+- To power off the device, press and hold the button until the LEDs turn off
+- To power the device back on, tap the button again
 
+* Manufacture
 
-*** Custom PCBs
- - Download and install [[https://www.kicad.org/][Kicad]]
- - Open Kicad, then open ~pcb/nametag.kicad_pro~.
- - Click the green button labeled "PCB Editor"
- - Double click on the text on the left to edit it
-   - When done, make sure any text you modified or added is on the
- F.Silkscreen layer, it should appear a teal blue.
- - Click File->Fabrication Outputs->Gerbers...
-   - Select a directory to export the PCB data to in "Output Directory"
-   - Leave the all the checkboxes as they are
-   - Click "Plot" on the bottom right
-   - Before closing the dialogue box, click "Generate Drill Files..."
-     on the bottom row
-   - Leave all settings on the new dialogue as default, click
-     "Generate Drill File"
-   - Close both dialogue boxes
- - Zip up the directory you created in the previous steps. It should
-   contain the following:
+** Hardware
+The PCBs I made were ordered from [[https://jlcpcb.com][JLCPCB]], through their PCB Assembly
+service. The design files under the [[https://github.com/xchgeaxeax90/wisp-nametag/releases/tag/v2.0][v2.0 Manufacturing Files]] release
+can be uploaded to JLCPCB's automatic quote system to order either
+bare PCBs or assembled boards.
 
-#+begin_src
-nametag-B_Cu.gbr
-nametag-B_Mask.gbr
-nametag-B_Paste.gbr
-nametag-B_Silkscreen.gbr
-nametag-Edge_Cuts.gbr
-nametag-F_Cu.gbr
-nametag-F_Mask.gbr
-nametag-F_Paste.gbr
-nametag-F_Silkscreen.gbr
-nametag-job.gbrjob
-nametag-NPTH.drl
-nametag-PTH.drl
-#+end_src
+*** Parts
 
- - Upload the zip to JLCPCB as described above for the blank PCB
+The Bill of Materials is below. When viewing the BOM from Kicad, the JLCPCB/LCSC part ids should be taken as the reference, some of the part numbers in the schematic are incorrect
+
+| Part Name            | Designator              | Comment                                     |
+|----------------------+-------------------------+---------------------------------------------|
+| TZ-P2-0603GTCS1-0.6T | D9,D10,D11,D12,D13,D14  | 0603 SMD LED – Emerald Green 520nm          |
+| TS-1088-AR02016      | SW1                     | 3.9x3.0mm SPST Momentary Button             |
+| CL10A226MQ8NRNC      | C1                      | 0603 22uf ceramic capacitor                 |
+| MPL2016S2R2MHT       | L1                      | 0806 2.2 uH inductor                        |
+| BL8536CB3TR36        | U2                      | 0.9V-3.3V Ultra Low Voltage Boost Converter |
+| 0603WAF470JT5E       | R1,R2                   | 0603 47 Ohm Resistor                        |
+| STC8H1K08-36I-QFN20  | U3                      | STC8H1K08 24MHz microcontroller             |
+| CL05B104KO5NNNC      | C2                      | 0402 100nF Capacitor                        |
+| LTST-C190KFKT        | D1,D2,D3,D4,D5,D6,D7,D8 | 0603 SMD LED – Orange 605nm                 |
+| SMLD12E3N1WT86       | D15,D16                 | 0603 SMD LED – Cyan 496nm                   |
+| 0603WAF3000T5E       | R3,R4,R5,R6,R7,R8       | 0603 300 Ohm Resistor                       |
+
+Note: If manufacturing this yourself, consider using the
+SMLD12E2N1WT86 505nm Blue-Green LED in place of the 520 Emerald Green
+LED. It looks much closer to mint green, but is much more difficult
+and expensive to source
 
 
-** Parts
-An interactive HTML BOM is available in pcb/bom/
+** Software
 
-My digikey order export is below if that is better for some people.
+The software loaded on the badges I gave (or will give) out can be
+found at the [[https://github.com/xchgeaxeax90/wisp-nametag/releases/tag/v2.0-software][v2.0 Software]] release. This contains the entire source
+code as well as prebuilt binaries that can be loaded directly onto the
+boards.
 
-| Index | DigiKey Part #                  | Manufacturer Part Number | Description                      | Quantity |
-|-------+---------------------------------+--------------------------+----------------------------------+----------|
-|     1 | 150-AVR16DD20-I/SO-ND           | AVR16DD20-I/SO           | IC MCU 8BIT 16KB FLASH 20SOIC    |        1 |
-|     2 | SMLD12E3N1WT86CT-ND             | SMLD12E3N1WT86           | LED BLUE-GREEN DIFFUSED 1608 SMD |        6 |
-|     3 | 160-1434-1-ND                   | LTST-C190KFKT            | LED ORANGE CLEAR CHIP SMD        |        8 |
-|     4 | 2223-TS02-66-43-BK-160-LCR-D-ND | TS02-66-43-BK-160-LCR-D  | SWITCH TACTILE SPST-NO 0.05A 12V |        1 |
-|     5 | 732-4971-1-ND                   | 150060GS75000            | LED GREEN CLEAR 0603 SMD         |        6 |
-|     6 | 36-2466-ND                      | 2466                     | BATTERY HOLDER AAA PC PIN        |        1 |
-|     7 | 846-SMLD12E2N1WT86CT-ND         | SMLD12E2N1WT86           | LED BLUE-GREEN DIFFUSED 1608 SMD |        2 |
-|     8 | 296-52012-1-ND                  | TPS613226ADBVR           | IC REG BOOST 3.6V 1.6A SOT23-5   |        1 |
-|     9 | 4713-GMC10X5R226M10NTCT-ND      | GMC10X5R226M10NT         | CAP0603 X5R 22UF 20% 10V         |        1 |
-|    10 | 3526-WIP201612S-2R2MLDGCT-ND    | WIP201612S-2R2MLDG       | POWER INDUCTOR 2016 2.2UH 20% DC |        1 |
-|    11 | 1292-WR06X470JTLCT-ND           | WR06X470 JTL             | RES 47 OHM 5% 1/10W 0603         |        2 |
-|    12 | 300 Ohm 0603 Resistor           | Pick one                 | It doesn't matter                |        6 |
-|    13 | 0.1uF 0603 X7R Capacitor        | Pick one                 | At least 6V                      |        2 |
+*** Programming
 
-The digikey order above lists 3 green LEDs:
- - SMLD12E3N1WT86 in index 2 - 496nm LED
- - SMLD12E2N1WT86 in index 7 - 505nm LED
- - 150060GS75000  in index 5 - 520nm LED
+The microcontroller can be programmed using a 3.3V USB to UART cable and the [[https://github.com/grigorig/stcgal][STCGal programmer software]].
 
-I originally bought 3 different types because I didn't know what color
-would look good. My preference was to have the 505nm LEDs on the
-border of the wisp as they look closest to a mint green. The 496nm
-LEDs are closer to a cyan and work well in the eye positions. the
-520nm LEDs are a cheaper alternative to 505nm LEDs, but are a much
-brighter and harsher green than the 505nm LEDs.
+1. Completely remove power from the board. The board cannot just be put to sleep using the button, it must be entirely powered off, with the battery removed
+2. Connect the microcontroller's TX and RX pins to the UART. These pins can be found on the programming header on the bottom left of the PCB when viewed from the back. If you're good, you can likely do this by just shoving pins in the holes instead of soldering them in place.
+3. Start =stcgal=, replacing =/dev/ttyUSB0= with your USB to UART's serial port device 
+   
+#+BEGIN_SRC bash
+  stcgal -p /dev/ttyUSB0 -P stc8g --trim 24000 path/to/app.hex
+#+END_SRC
 
-Consider what color LEDs you want where, just keep in mind you will
-need 8 total to fill out the wisp
+4. Power on the board - I like to use alligator clips to clip directly on to the battery terminals, but you can also just insert the battery
 
-The BOM above also lists out some jelly bean 300 ohm resistors and
-0.1uF capacitors, both in 0603 size. If you don't have those already,
-pick the cheapest ones
-
-Finally, pay attention to your electronic distributor's price breaks,
-especially when ordering for only one nametag. For things like LEDs,
-resistors, and capacitors, it's often cheaper to order 10 than 4-9,
-and you are quite likely to accidentally lose one or two during
-assembly. It also would be a good idea to order an extra TPS613226
-boost converter in case you fry it putting the battery in wrong (ask
-how I know)
-
-** Assembly
-
-Assemble everything according to the interactive BOM in ~pcb/bom~. Pay
-attention to the LED polarity. The green LEDs have a little arrow on
-the back, that needs to point towards the closed end on each of the
-LED footprints. Similarly, the orange LEDs have a little extra tab of
-metal on the back, that again needs to face the closed end on the
-silkscreen for each of the LED footprints.
-
-Make sure to attach the battery holder to the back side of the PCB,
-and ensure it's facing the right polarity
-
-Do not populate the J1 connector, for programming it's far easier to
-just jam wires into the holes for a minute instead of worrying about
-desoldering a programming header when you want to actually wear the badge
-
-** Programming
-
-The AVR16DD used in this project uses Microchip's new Universal
-Programming and Debug Interface (UPDI). While very convenient as it
-only uses one pin, programmers for it are not super common. However,
-it's not too difficult to build your own:
-
- - If you have an arduino or other older AVR development board: https://github.com/ElTangas/jtag2updi
-   - Be careful with this as the nametag circuit runs on 3.6V, not
-     5V. You may need a level shifter and definitely at least need the
-     resistor shown in this guide
- - If you have an extra $7, this looks pretty convenient: https://www.adafruit.com/product/5879
- - If you have an FTDI, CP2102, CH340, or other UART dongle, you can
-   build an UPDI programmer using the information here https://github.com/SpenceKonde/AVR-Guidance/blob/master/UPDI/jtag2updi.md
-   - This is what I did here, I used an FT232H cable with a 5k
-     resistor between FT232H TX and the UPDI pin of the
-     microcontroller. FT232H RX is directly connected to the UPDI pin
-     of the microcontroller
-   - Pay attention to the voltage levels output by the UART dongle, as
-     again this circuit runs on 3.6V not 5V.
-
-Connect the UPDI pin to the topmost pin of J1 (Pin 4), and ground to
-the second pin from the top of J1 (Pin 3)
-
-Download and install [[https://github.com/avrdudes/avrdude][avrdude]]
-
-Navigate to the src/ folder
-
-Run:
-
-#+begin_src
-avrdude -c serialupdi -P /dev/ttyUSB0 -p avr16dd20 -B 115200 -U flash:w:main.hex:i
-#+end_src
-
-Replace ~-c serialupdi~ with ~-c jtag2updi~ if using the arduino updi
-method.
-Replace ~-P /dev/ttyUSB0~ with the path to your serial port
-Lower ~-B 115200~ if having issues with flaky programming
-
-If successful, your badge should begin flashing
+5. The programmer should automatically begin downloading the code to the microcontroller
 
 
-Some method of affixing the nametag to your body will be needed. A
-slot is available on the top of the PCB for affixing to a
-lanyard. Alternatively (this is what I did) a
-[[https://www.ebay.com/itm/183618333854?_skw=magnetic+nametag+holder&itmmeta=01JF978J9D4CN58SRMX7CEVARF&hash=item2ac0816c9e:g:nFcAAOSwXINlhPe9&itmprp=enc%3AAQAJAAAA8HoV3kP08IDx%2BKZ9MfhVJKl8eDQyYYDvol0xfGkntdjdzYvc0itx%2FD3jzu9YclMZHiFoQXJTQXiDHWaCkl4CLsYIJimluLo76ASOEXKf9XbWaN%2BV97hdnUI7nPHgzphf0ATnBnSQKf7LFTNqUwUBqT2fCNQZ61JnggNFSEFKr2nlNvgJ57GA0NNvB9OqA0clghpYkS2cRdJ%2Fccp7r6FvBFtUaCyiOOLuyghwAWVIA36d9Cy7unBkUYBuOrZrZOrXO7lZsI0u%2BokIqlwvbhUpUzIA8JHnnUC3vIXqY5d7WG2Wd8%2BUSAdzqg2mJIyuA5SDew%3D%3D%7Ctkp%3ABFBM5qSip_pk][magnetic nametag holder]] or pin should be used
-
-
-** Modifying the source code
-LMAO good luck
-
-Install
-[[https://avrdudes.github.io/avr-libc/avr-libc-user-manual/install_tools.html][avr-gcc,
-avr-binutils, and avr-libc]] -
-these will come preinstalled with the arduino IDE if you can figure
-out how to access them.
-
-Install [[https://www.gnu.org/software/make/][Make]]. This may come with
-Git bash on windows and is almost certainly in your package manager on
-Linux.
-
-Navigate to ~src/~ and run ~make~
-
-Run ~make prog~ to program the microcontroller
-
-** Operation
-
-To cycle animations, quickly tap the button
-
-To change the brightness, hold the button for ~3 seconds and
-release. The LEDs should turn on continuously. Tap the button to
-change the brightness, then press and hold for ~3 seconds and release
-again to go back to the animation mode
-
-To turn off, push and hold the button until the LEDs turn off
-
-To turn back on, tap the button again
-
-When storing for a long period of time (weeks, months), it is
-recommended to remove or disconnect the battery. The system does not
-actually shut off when powered off, instead the microcontroller turns
-off all the LEDs and enters into a deep sleep mode. However, the boost
-converter powering the circuit remains on, drawing a tiny amount of
-power. Over a long period of time (months), this will drain the battery.
