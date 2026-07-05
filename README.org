@@ -35,19 +35,20 @@ bare PCBs or assembled boards.
 
 The Bill of Materials is below. When viewing the BOM from Kicad, the JLCPCB/LCSC part ids should be taken as the reference, some of the part numbers in the schematic are incorrect
 
-| Part Name            | Designator              | Comment                                     |
-|----------------------+-------------------------+---------------------------------------------|
-| TZ-P2-0603GTCS1-0.6T | D9,D10,D11,D12,D13,D14  | 0603 SMD LED – Emerald Green 520nm          |
-| TS-1088-AR02016      | SW1                     | 3.9x3.0mm SPST Momentary Button             |
-| CL10A226MQ8NRNC      | C1                      | 0603 22uf ceramic capacitor                 |
-| MPL2016S2R2MHT       | L1                      | 0806 2.2 uH inductor                        |
-| BL8536CB3TR36        | U2                      | 0.9V-3.3V Ultra Low Voltage Boost Converter |
-| 0603WAF470JT5E       | R1,R2                   | 0603 47 Ohm Resistor                        |
-| STC8H1K08-36I-QFN20  | U3                      | STC8H1K08 24MHz microcontroller             |
-| CL05B104KO5NNNC      | C2                      | 0402 100nF Capacitor                        |
-| LTST-C190KFKT        | D1,D2,D3,D4,D5,D6,D7,D8 | 0603 SMD LED – Orange 605nm                 |
-| SMLD12E3N1WT86       | D15,D16                 | 0603 SMD LED – Cyan 496nm                   |
-| 0603WAF3000T5E       | R3,R4,R5,R6,R7,R8       | 0603 300 Ohm Resistor                       |
+| Part Name            | Designator              | Comment                                                                |
+|----------------------+-------------------------+------------------------------------------------------------------------|
+| TZ-P2-0603GTCS1-0.6T | D9,D10,D11,D12,D13,D14  | 0603 SMD LED – Emerald Green 520nm                                     |
+| TS-1088-AR02016      | SW1                     | 3.9x3.0mm SPST Momentary Button                                        |
+| CL10A226MQ8NRNC      | C1                      | 0603 22uf ceramic capacitor                                            |
+| MPL2016S2R2MHT       | L1                      | 0806 2.2 uH inductor                                                   |
+| BL8536CB3TR36        | U2                      | 0.9V-3.3V Ultra Low Voltage Boost Converter                            |
+| 0603WAF470JT5E       | R1,R2                   | 0603 47 Ohm Resistor                                                   |
+| STC8H1K08-36I-QFN20  | U3                      | STC8H1K08 24MHz microcontroller                                        |
+| CL05B104KO5NNNC      | C2                      | 0402 100nF Capacitor                                                   |
+| LTST-C190KFKT        | D1,D2,D3,D4,D5,D6,D7,D8 | 0603 SMD LED – Orange 605nm                                            |
+| SMLD12E3N1WT86       | D15,D16                 | 0603 SMD LED – Cyan 496nm                                              |
+| 0603WAF3000T5E       | R3,R4,R5,R6,R7,R8       | 0603 300 Ohm Resistor                                                  |
+| 2466                 | BT1                     | AAA Battery Holder (not included in JLCPCB quote, hand solder on back) |
 
 Note: If manufacturing this yourself, consider using the
 SMLD12E2N1WT86 505nm Blue-Green LED in place of the 520 Emerald Green
